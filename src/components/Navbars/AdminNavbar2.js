@@ -35,10 +35,10 @@ import {
   Media,
 } from "reactstrap";
 
-const AdminNavbar = (props) => {
+const AdminNavbar2 = (props) => {
   return (
     <>
-      <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
+      <Navbar className="navbar-top navbar-dark pb-8 pt-5 pt-md-8" expand="md" id="navbar">
         <Container fluid>
           <Link
             className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
@@ -56,7 +56,16 @@ const AdminNavbar = (props) => {
                 <Input placeholder="Buscar" type="text" />
               </InputGroup>
             </FormGroup>
-            
+            <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-hat-3" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Valor de egresos" type="number" />
+                </InputGroup>
+              </FormGroup>
           </Form>
         </Container>
       </Navbar>
@@ -64,4 +73,4 @@ const AdminNavbar = (props) => {
   );
 };
 
-export default AdminNavbar;
+export default AdminNavbar2;

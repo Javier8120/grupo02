@@ -34,7 +34,7 @@ import {
   Media,
 } from "reactstrap";
 
-const AdminNavbar = (props) => {
+const ClientNavbar = (props) => {
   return (
     <>
       <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
@@ -80,7 +80,7 @@ const AdminNavbar = (props) => {
                 <DropdownItem className="noti-title" header tag="div">
                   <h6 className="text-overflow m-0">Welcome!</h6>
                 </DropdownItem>
-                <DropdownItem to="/admin/user-profile" tag={Link}>
+                <DropdownItem to="/cliente/user-profile" tag={Link}>
                   <i className="ni ni-single-02" />
                   <span>My Perfil</span>
                 </DropdownItem>
@@ -92,8 +92,12 @@ const AdminNavbar = (props) => {
                   <i className="ni ni-calendar-grid-58" />
                   <span>Activity</span>
                 </DropdownItem> */}
+                <DropdownItem to="/cliente/user-profile" tag={Link}>
+                  <i className="ni ni-support-16" />
+                  <span>Soporte</span>
+                </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                <DropdownItem href="#javier" onClick={(e) => e.preventDefault()}>
                   <i className="ni ni-user-run" />
                   <span>Cerrar Sesion</span>
                 </DropdownItem>
@@ -106,4 +110,4 @@ const AdminNavbar = (props) => {
   );
 };
 
-export default AdminNavbar;
+export default ClientNavbar;

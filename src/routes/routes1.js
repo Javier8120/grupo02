@@ -15,15 +15,20 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Index from "views/admin/Index";
-import Register from "views/auth/Register.js";
-import Login from "views/auth/Login.js";
+
+
 /* import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js"; 
 import Profile from "views/examples/Profile.js";
 import Maps from "views/examples/Maps.js";
 */
-import AdminUsers from  "views/admin/AdminUsers"
+
+import Index from "views/admin/Index";
+import Register from "views/auth/Register.js";
+import Login from "views/auth/Login.js";
+import ClientUsers from  "views/admin/ClientUsers"
+import EmpleadosUsers from "views/admin/EmpleadosUsers"
+import Profile from "views/admin/Profile.js"
 
 var routes = [
   {
@@ -33,12 +38,26 @@ var routes = [
     component: Index,
     layout: "/admin",
   },
+  {
+    path: "/profile",
+    name: "Perfil",
+    icon: "ni ni-circle-08 text-yellow",
+    component: Profile,
+    layout: "/admin",
+  },
 
   {
-    path: "/AdminUsers",
-    name: "Gestionar Usuarios",
-    icon: "ni ni-world text-primary",
-    component: AdminUsers,
+    path: "/gestionar-clientes",
+    name: "Gestionar Clientes",
+    icon: "ni ni-folder-17 text-blue",
+    component: ClientUsers,
+    layout: "/admin",
+  },
+  {
+    path: "/gestionar-empleados",
+    name: "Gestionar Empleados",
+    icon: "ni ni-folder-17 text-orange",
+    component: EmpleadosUsers,
     layout: "/admin",
   },
 
@@ -76,7 +95,7 @@ var routes = [
     component: Tables,
     layout: "/admin",
   }, */
-  {
+ /*  {
     path: "/login",
     name: "Login",
     icon: "ni ni-key-25 text-info",
@@ -89,7 +108,7 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: Register,
     layout: "/auth",
-  },
+  }, */
  /* {
     path: "/SolicitarCredito",
     name: "Solicita Tu Credito",
