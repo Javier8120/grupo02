@@ -88,35 +88,34 @@ const Register = () => {
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-single-02" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
+                  <Input placeholder="Nombres" type="text" />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-single-02" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Apellido" type="text" />
+                  <Input placeholder="Apellidos" type="text" />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-ui-04" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <select type="text" class="form-control">
-                    <option>Tipo de Identificacion</option>
+                  <select type="text" class="form-control">    
+                    {/* <option>Tipo de Identificacion</option> */}
                     <option> Cedula Ciudadania</option>
                     <option> Cedula Extranjera</option>
                     <option> Pasaporte</option>
-                    <option> ...</option>
                   </select>
                 </InputGroup>
               </FormGroup>
@@ -124,7 +123,7 @@ const Register = () => {
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-check-bold" />
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input placeholder="Numero Identificacion" type="number" />
@@ -164,7 +163,7 @@ const Register = () => {
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-fat-add" />
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input placeholder="Valor de Ingresos" type="number" />
@@ -174,10 +173,20 @@ const Register = () => {
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-fat-delete" />
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input placeholder="Valor de egresos" type="number" />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-fat-delete" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Valor Matricula Educativa" type="number" />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -208,6 +217,7 @@ const Register = () => {
                     autoComplete="new-password"
                     required
                   />
+                  
                 </InputGroup>
               </FormGroup>
               <div className="text-muted font-italic">
@@ -239,14 +249,15 @@ const Register = () => {
                 </Col>
               </Row>
               <div className="text-center">
-                <Button className="mt-4" color="primary" type="button">
-                  Crear Cuenta
+                <Button className="mt-4" color="success" type="button">
+                  Solicitar Credito
                 </Button>
               </div>
             </Form>
           </CardBody>
         </Card>
       </Col>
+      
     </>
   );
 };

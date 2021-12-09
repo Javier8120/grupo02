@@ -33,6 +33,8 @@ import {
     Table,
     Container,
     Row,
+    Col,
+    Button,
     UncontrolledTooltip,
   } from "reactstrap";
   // core components
@@ -48,8 +50,22 @@ import {
           <Row className="mt-5">
             <div className="col">
               <Card className="bg-default shadow">
-                <CardHeader className="bg-transparent border-0">
-                  <h3 className="text-white mb-0">Usuarios</h3>
+              <CardHeader className="bg-transparent border-0">
+                  <Row className="align-items-center">
+                    <Col xs="8">
+                      <h3 className="text-white mb-0">Clientes</h3>
+                    </Col>
+                     <Col className="text-right" xs="4">
+                      <Button
+                        color="primary"
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                        size="sm"
+                      >
+                      Agregar
+                      </Button>
+                    </Col> 
+                  </Row>
                 </CardHeader>
                 <Table
                   className="align-items-center table-dark table-flush"
@@ -110,12 +126,12 @@ import {
                             >
                               ELIMINAR
                             </DropdownItem>
-                            <DropdownItem
+                            {/* <DropdownItem
                               href="#javier"
                               onClick={(e) => e.preventDefault()}
                             >
                               AGREGAR
-                            </DropdownItem>
+                            </DropdownItem> */}
                           </DropdownMenu>
                         </UncontrolledDropdown>
                       </td>

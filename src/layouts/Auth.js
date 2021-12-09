@@ -67,11 +67,12 @@ const Auth = (props) => {
             <div className="header-body text-center mb-7">
               <Row className="justify-content-center">
                 <Col lg="5" md="6">
-                  <h1 className="text-white">Welcome!</h1>
+                  <h1 className="text-white">Bienvenido(a)</h1>
                   <p className="text-light text-white">
                     En esta plataforma podras solicitar tu credito educativo de forma 
-                    facil, rapida y segura, te invitamos a iniciar seision o registrarte
-                    segun sea tu caso. Buenas suerte
+                    facil, rapida y segura, te invitamos a proporcionar tu informacion
+                    para poder procesar tu solicitud o si tu credito ya fue aprobado  
+                    invitamos a iniciar sesion y administrar tu credito.
                   </p>
                 </Col>
               </Row>

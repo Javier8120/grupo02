@@ -81,7 +81,7 @@ const AdminNavbar = () => {
                   tag={Link}
                 >
                   <i className="ni ni-circle-08" />
-                  <span className="nav-link-inner--text">Register</span>
+                  <span className="nav-link-inner--text">Solicitar Credito</span>
                 </NavLink>
               </NavItem>
               <NavItem>
