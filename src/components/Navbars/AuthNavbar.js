@@ -81,13 +81,13 @@ const AdminNavbar = () => {
                   tag={Link}
                 >
                   <i className="ni ni-circle-08" />
-                  <span className="nav-link-inner--text">Solicitar Credito</span>
+                  <span className="nav-link-inner--text">Registrarse</span>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="nav-link-icon" to="/auth/login" tag={Link}>
                   <i className="ni ni-key-25" />
-                  <span className="nav-link-inner--text">Login</span>
+                  <span className="nav-link-inner--text">Inicie Sesion</span>
                 </NavLink>
               </NavItem>
              {/*  <NavItem>

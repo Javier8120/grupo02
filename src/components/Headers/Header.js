@@ -81,7 +81,7 @@ const Header = () => {
                       <span className="text-danger mr-2">
                         <i className="fas fa-arrow-down" /> 3.48%
                       </span>{" "}
-                      <span className="text-nowrap">Since last week</span>
+                      <span className="text-nowrap">Ultima Semana</span>
                     </p>
                   </CardBody>
                 </Card>
@@ -109,7 +109,7 @@ const Header = () => {
                       <span className="text-warning mr-2">
                         <i className="fas fa-arrow-down" /> 1.10%
                       </span>{" "}
-                      <span className="text-nowrap">Since yesterday</span>
+                      <span className="text-nowrap">Recientemente</span>
                     </p>
                   </CardBody>
                 </Card>

@@ -87,7 +87,7 @@ const Index = (props) => {
                           href="#pablo"
                           onClick={(e) => toggleNavs(e, 1)}
                         >
-                          <span className="d-none d-md-block">Month</span>
+                          <span className="d-none d-md-block">Mes</span>
                           <span className="d-md-none">M</span>
                         </NavLink>
                       </NavItem>
@@ -100,8 +100,8 @@ const Index = (props) => {
                           href="#pablo"
                           onClick={(e) => toggleNavs(e, 2)}
                         >
-                          <span className="d-none d-md-block">Week</span>
-                          <span className="d-md-none">W</span>
+                          <span className="d-none d-md-block">Semanal</span>
+                          <span className="d-md-none">S</span>
                         </NavLink>
                       </NavItem>
                     </Nav>
@@ -159,7 +159,7 @@ const Index = (props) => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      See all
+                      Ver
                     </Button>
                   </div>
                 </Row>
@@ -235,7 +235,7 @@ const Index = (props) => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      See all
+                      Ver
                     </Button>
                   </div>
                 </Row>
