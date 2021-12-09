@@ -37,6 +37,7 @@ var routes = [
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/admin",
+    invisible: true,
   },
   {
     path: "/profile",
@@ -44,6 +45,7 @@ var routes = [
     icon: "ni ni-circle-08 text-yellow",
     component: Profile,
     layout: "/admin",
+    invisible: true,
   },
 
   {
@@ -52,6 +54,7 @@ var routes = [
     icon: "ni ni-folder-17 text-blue",
     component: ClientUsers,
     layout: "/admin",
+    invisible: true,
   },
   {
     path: "/gestionar-empleados",
@@ -59,6 +62,7 @@ var routes = [
     icon: "ni ni-folder-17 text-orange",
     component: EmpleadosUsers,
     layout: "/admin",
+    invisible: true,
   },
 
 
@@ -95,12 +99,13 @@ var routes = [
     component: Tables,
     layout: "/admin",
   }, */
- /*  {
+  {
     path: "/login",
     name: "Login",
     icon: "ni ni-key-25 text-info",
     component: Login,
     layout: "/auth",
+    invisible: false,
   },
   {
     path: "/register",
@@ -108,14 +113,15 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: Register,
     layout: "/auth",
-  }, */
- /* {
+    invisible: false,
+  }, 
+  /* {
     path: "/SolicitarCredito",
     name: "Solicita Tu Credito",
     icon: "ni ni-tv-2 text-primary",
     component: Cliente,
     layout: "/cliente",
-  }, */
+  },  */
 
 
 

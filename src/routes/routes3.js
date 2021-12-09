@@ -34,6 +34,7 @@ var routes = [
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/empleado",
+    invisible: true,
   },
  
   {
@@ -42,6 +43,7 @@ var routes = [
     icon: "ni ni-planet text-blue",
     component:GenerarCreditos,
     layout: "/empleado",
+    invisible: true,
   },
   {
     path: "/gestionar-historiales",
@@ -49,6 +51,7 @@ var routes = [
     icon: "ni ni-pin-3 text-orange",
     component: GenerarHistorial,
     layout: "/empleado",
+    invisible: true,
   },
   {
     path: "/prorrogas",
@@ -56,6 +59,7 @@ var routes = [
     icon: "ni ni-single-02 text-yellow",
     component: Prorroga,
     layout: "/empleado",
+    invisible: true,
   },
   
 

@@ -34,6 +34,7 @@ var routes = [
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/cliente",
+    invisible: true,
   },
  
   {
@@ -42,6 +43,7 @@ var routes = [
     icon: "ni ni-planet text-blue",
     component: SolicitarCredito,
     layout: "/cliente",
+    invisible: true,
   },
   {
     path: "/historial-de-pagos",
@@ -49,6 +51,7 @@ var routes = [
     icon: "ni ni-pin-3 text-orange",
     component: Historial,
     layout: "/cliente",
+    invisible: true,
   },
   /* {
     path: "/solicitar-Prorroga",
@@ -71,6 +74,7 @@ var routes = [
     icon: "ni ni-bullet-list-67 text-red",
     component: Pagar,
     layout: "/cliente", 
+    invisible: true,
   },
   /* {
     path: "/login",

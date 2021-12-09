@@ -38,7 +38,7 @@ const Empleado    = (props) => {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/empleado") {
         return (
           <Route
             path={prop.layout + prop.path}
