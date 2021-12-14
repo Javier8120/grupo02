@@ -66,90 +66,14 @@ const Index = (props) => {
       <Header />
       {/* Page content */}
       <Container className="mt--7" fluid>
-        <Row>
-          <Col className="mb-5 mb-xl-0" xl="8">
-            <Card className="bg-gradient-default shadow">
-              <CardHeader className="bg-transparent">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h6 className="text-uppercase text-light ls-1 mb-1">
-                      Vistas
-                    </h6>
-                    <h2 className="text-white mb-0">Valor Mensual</h2>
-                  </div>
-                  <div className="col">
-                    <Nav className="justify-content-end" pills>
-                      <NavItem>
-                        <NavLink
-                          className={classnames("py-2 px-3", {
-                            active: activeNav === 1,
-                          })}
-                          href="#pablo"
-                          onClick={(e) => toggleNavs(e, 1)}
-                        >
-                          <span className="d-none d-md-block">Mensual</span>
-                          <span className="d-md-none">M</span>
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames("py-2 px-3", {
-                            active: activeNav === 2,
-                          })}
-                          data-toggle="tab"
-                          href="#pablo"
-                          onClick={(e) => toggleNavs(e, 2)}
-                        >
-                          <span className="d-none d-md-block">Semanal</span>
-                          <span className="d-md-none">S</span>
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
-                  </div>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                <div className="chart">
-                  <Line
-                    data={chartExample1[chartExample1Data]}
-                    options={chartExample1.options}
-                    getDatasetAtEvent={(e) => console.log(e)}
-                  />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xl="4">
-            <Card className="shadow">
-              <CardHeader className="bg-transparent">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Rendimiento
-                    </h6>
-                    <h2 className="mb-0">Total Creditos solicitados</h2>
-                  </div>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                {/* Chart */}
-                <div className="chart">
-                  <Bar
-                    data={chartExample2.data}
-                    options={chartExample2.options}
-                  />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
+        
         <Row className="mt-5">
           <Col className="mb-5 mb-xl-0" xl="8">
-            <Card className="shadow">
-              <CardHeader className="border-0">
+            <Card className="bg-default shadow">
+              <CardHeader className="bg-transparent border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Solicitudes de Prorroga</h3>
+                    <h3 className="text-white mb-0">Solicitudes de Prorroga</h3>
                   </div>
                   <div className="col text-right">
                     <Button
@@ -164,7 +88,7 @@ const Index = (props) => {
                 </Row>
               </CardHeader>
               <Table className="align-items-center table-flush" responsive>
-                <thead className="thead-light">
+                <thead className="thead-dark">
                   <tr>
                     <th scope="col">Nombre de Solicitante</th>
                     <th scope="col">Correo</th>
@@ -172,60 +96,24 @@ const Index = (props) => {
                     <th scope="col">Tiempo de Prorroga</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="thead-dark">
                   <tr>
-                    <th scope="row">Rafael</th>
-                    <td>Rafaeljose12@gmail.com</td>
-                    <td>1002934546</td>
-                    <td>6 meses
-                      {/* <i className="fas fa-arrow-up text-success mr-3" /> 46,53% */}
-                    </td>
+                    <th scope="col">Rafael</th>
+                    <th scope="col">Rafaeljose12@gmail.com</th>
+                    <th scope="col">1002934546</th>
+                    <th scope="col">6 meses</th>
                   </tr>
-{/*                   <tr>
-                    <th scope="row">/argon/index.html</th>
-                    <td>3,985</td>
-                    <td>319</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/charts.html</th>
-                    <td>3,513</td>
-                    <td>294</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      36,49%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/tables.html</th>
-                    <td>2,050</td>
-                    <td>147</td>
-                    <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 50,87%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/profile.html</th>
-                    <td>1,795</td>
-                    <td>190</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-danger mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr> */}
+
                 </tbody>
               </Table>
             </Card>
           </Col>
           <Col xl="4">
-            <Card className="shadow">
-              <CardHeader className="border-0">
+          <Card className="bg-default shadow">
+              <CardHeader className="bg-transparent border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Trafico de Prorrogas</h3>
+                    <h3 className="text-white mb-0">Trafico de Prorrogas</h3>
                   </div>
                   <div className="col text-right">
                     <Button
@@ -240,11 +128,11 @@ const Index = (props) => {
                 </Row>
               </CardHeader>
               <Table className="align-items-center table-flush" responsive>
-                <thead className="thead-light">
+                <thead className="thead-dark">
                   <tr>
                     <th scope="col">N° de Prorroga</th>
                     <th scope="col">Solicitante</th>
-                    <th scope="col">Validacion de la Solicitud</th> 
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -252,7 +140,7 @@ const Index = (props) => {
                     <th scope="row">04</th>
                     <td>Johan</td>
                     <td>
-                      <div className="d-flex align-items-center">
+                      {/* <div className="d-flex align-items-center">
                         <span className="mr-2">90%</span>
                         <div>
                           <Progress
@@ -261,14 +149,14 @@ const Index = (props) => {
                             barClassName="bg-gradient-danger"
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </td>
                   </tr>
                   <tr>
                     <th scope="row">05</th>
                     <td>Andres</td>
                     <td>
-                      <div className="d-flex align-items-center">
+                      {/* <div className="d-flex align-items-center">
                         <span className="mr-2">79%</span>
                         <div>
                           <Progress
@@ -277,7 +165,7 @@ const Index = (props) => {
                             barClassName="bg-gradient-success"
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </td>
                   </tr>
                   {/* <tr>

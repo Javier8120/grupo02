@@ -40,7 +40,7 @@ const UserHeader = () => {
         <Container className="d-flex align-items-center" fluid>
           <Row>
             <Col lg="7" md="10">
-              <h1 className="display-2 text-white">Hello Jesse</h1>
+              <h1 className="display-2 text-white">Hola Jesse</h1>
               <p className="text-white mt-0 mb-5">
                 Esta es tu pagina de perfil, puedes ver y editar tus datos personales
                 -Verifica que todo este claro para evitar incovenientes

@@ -250,7 +250,7 @@ const Register = () => {
               </Row>
               <div className="text-center">
                 <Button className="mt-4" color="success" type="button">
-                  Solicitar Credito
+                  Registrarme
                 </Button>
               </div>
             </Form>

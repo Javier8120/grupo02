@@ -82,7 +82,7 @@ import {
                       <th scope="col" />
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody >
                     <tr>
                       <th scope="row">
                             <span className="mb-0 text-sm">
