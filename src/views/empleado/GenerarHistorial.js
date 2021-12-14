@@ -68,8 +68,7 @@ const EmpleadosUsers = () => {
                     <th scope="col">Tipo Identificacion</th>
                     <th scope="col">Identificacion</th>
                     <th scope="col">Correo</th>
-                    <th scope="col">Ultimo mes de pago</th>
-                    <th scope="col">Pago Realizado</th>
+                    <th scope="col">Ultimo pago realizado</th>
                     <th scope="col" />
                   </tr>
                 </thead>
@@ -90,10 +89,9 @@ const EmpleadosUsers = () => {
                     <td>
                       <Badge color="" className="badge-dot mr-4">
                         <i className="bg-green" />
-                        Octubre
+                        900.000 $
                       </Badge>
-                    </td>
-                    <td>900.000 $</td>
+                    </td> 
                   </tr>
 
                   <tr>
@@ -111,11 +109,10 @@ const EmpleadosUsers = () => {
                     <td>harsond@uninorte.edu.co</td>
                     <td>
                       <Badge color="" className="badge-dot mr-4">
-                        <i className="bg-green" />
-                        Julio
+                        <i className="bg-orange" />
+                        1.450.000 $
                       </Badge>
                     </td>
-                    <td>1.450.000 $</td>
                   </tr>
                 </tbody>
               </Table>
