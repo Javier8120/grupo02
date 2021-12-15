@@ -129,7 +129,6 @@ function EmpleadoUsers() {
     rows,
     preGlobalFilteredRows,
     setGlobalFilter,
-    PageSize,
     state: { pageIndex, pageSize, globalFilter }
   } = table;
 
@@ -168,35 +167,7 @@ function EmpleadoUsers() {
                         {row.cells.map((cell) => (
                           <th scope="row" {...cell.getCellProps()}>{cell.render("Cell")}</th>
                         ))}
-                        <td className="text-right">
-                          <UncontrolledDropdown>
-                            <DropdownToggle
-                              className="btn-icon-only text-light"
-                              href="#Javier"
-                              role="Button"
-                              size="sm"
-                              color=""
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              <i className="fas fa-ellipsis-v" />
-                            </DropdownToggle>
-                            <DropdownMenu className="dropdown-menu-arrow" right>
-                              <DropdownItem
-                                href="#javier"
-                                onClick={(e) => e.preventDefault()}
-                              >
-                                EDITAR
-                              </DropdownItem>
-                              <DropdownItem
-                                href="#javier"
-                                onClick={(e) => e.preventDefault()}
-                              >
-                                ELIMINAR
-                              </DropdownItem>
-
-                            </DropdownMenu>
-                          </UncontrolledDropdown>
-                        </td>
+                        
                       </tr>
                     );
                   })}
@@ -233,7 +204,7 @@ function EmpleadoUsers() {
               </Col>
               <Col xs="4">
                 <select  class="form-control"
-                  value={PageSize}
+                  value={pageSize}
                   onChange={(e) => setPageSize(Number(e.target.value))}
                 >
                   {[5, 10, 15].map((pageSize) => (

@@ -31,13 +31,12 @@ import {
 } from "reactstrap";
 // core components
 
-import { useState} from "react";
+import { useState } from "react";
 import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
 import useRows from "components/Tables/FilasA.js";
 import useColumns from "components/Tables/ColumnasA.js";
 import Header from "components/Headers/Header.js";
-import EliminarCliente from "components/Modals/EliminarCliente.js"
-
+import AgregarCliente from "components/Modals/AgregarCliente.js"
 
 function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
   const totalClientes = preGlobalFilteredRows.length;
@@ -84,14 +83,7 @@ function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }
 
         </Col>
         <Col className="text-right" xs="4">
-          <Button
-            color="primary"
-            href="#Javier"
-            onClick={(e) => e.preventDefault()}
-            size="sm"
-          >
-            Agregar
-          </Button>
+          <AgregarCliente />
         </Col>
       </Row>
     </CardHeader>
@@ -158,7 +150,8 @@ function ClientUsers() {
                   {headerGroups.map((headerGroup) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
                       {headerGroup.headers.map((column) => (
-                        <th scope="col" {...column.getHeaderProps()}>{column.render("Header")}</th>
+                        <th scope="col" {...column.getHeaderProps()}>{column.render("Header")}
+                        </th>
                       ))}
                     </tr>
                   ))}
@@ -166,80 +159,58 @@ function ClientUsers() {
                 <tbody {...getTableBodyProps()}>
                   {
                     page.map((row) => {
-                    prepareRow(row);
-                    return (
-                      <tr {...row.getRowProps()}>
-                        {row.cells.map((cell) => (
-                          <th scope="row" {...cell.getCellProps()}>{cell.render("Cell")}</th>
-                        ))}
-                        <td className="text-right">
-                          <UncontrolledDropdown>
-                            <DropdownToggle
-                              className="btn-icon-only text-light"
-                              href="#Javier"
-                              role="Button"
-                              size="sm"
-                              color=""
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              <i className="fas fa-ellipsis-v" />
-                            </DropdownToggle>
-                            <DropdownMenu className="dropdown-menu-arrow" right>
-                              <DropdownItem
-                               
-                              >
-                                EDITAR
-                              </DropdownItem>
-                             <EliminarCliente/>
-                            </DropdownMenu>
-                          </UncontrolledDropdown>
-                        </td>
-                      </tr>
-                    );
-                  })}
-
+                      prepareRow(row);
+                      return (
+                        <tr {...row.getRowProps()}>
+                          {row.cells.map((cell) => (
+                            <th scope="row" {...cell.getCellProps()}>{cell.render("Cell")}
+                            </th>
+                          ))}
+                          </tr>
+                      );
+                    })}
                 </tbody>
               </Table>
               <CardFooter className="bg-transparent border-0">
                 <Row className="align-items-center">
-                <Col xs="4">
-                <h2>Página
-                  <strong>
-                    {" "}
-                    {pageIndex + 1} de {pageOptions.length}
-                  </strong>{" "}
-                </h2>
-              </Col>
-              <Col xs="4">
-                <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage} className="mt-4" color="primary">
-                  <i class="fas fa-angle-double-left"></i>
-                </Button>{" "}
-                <Button onClick={() => previousPage()} disabled={!canPreviousPage} className="mt-4" color="primary">
-                <i class="fas fa-angle-left"></i>
-                </Button>{" "}
-                <Button onClick={() => nextPage()} disabled={!canNextPage} className="mt-4" color="primary">
-                <i class="fas fa-angle-right"></i>
-                </Button>{" "}
-                <Button className="mt-4" color="primary"
-                  onClick={() => gotoPage(pageCount - 1)}
-                  disabled={!canNextPage}
-                  
-                >
-                  <i class="fas fa-angle-double-right"></i>
-                </Button>{" "}
-              </Col>
-              <Col xs="4">
-                <select  class="form-control"
-                  value={PageSize}
-                  onChange={(e) => setPageSize(Number(e.target.value))}
-                >
-                  {[5, 10, 15].map((pageSize) => (
-                    <option key={pageSize} value={pageSize}>
-                      {pageSize !== 15 ? `Mostrar ${pageSize}` : `Mostrar todo`}
-                    </option>
-                  ))}
-                </select>
-              </Col>
+                  <Col xs="4">
+                    <h2>Página
+                      <strong>
+                        {" "}
+                        {pageIndex + 1} de {pageOptions.length}
+                      </strong>{" "}
+                    </h2>
+                  </Col>
+                  <Col xs="4">
+                    <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage} className="mt-4" color="primary">
+                      <i class="fas fa-angle-double-left"></i>
+                    </Button>{" "}
+                    <Button onClick={() => previousPage()} disabled={!canPreviousPage} className="mt-4" color="primary">
+                      <i class="fas fa-angle-left"></i>
+                    </Button>{" "}
+                    <Button onClick={() => nextPage()} disabled={!canNextPage} className="mt-4" color="primary">
+                      <i class="fas fa-angle-right"></i>
+                    </Button>{" "}
+                    <Button className="mt-4" color="primary"
+                      onClick={() => gotoPage(pageCount - 1)}
+                      disabled={!canNextPage}
+
+                    >
+                      <i class="fas fa-angle-double-right"></i>
+                    </Button>{" "}
+                  </Col>
+                  <Col xs="4">
+                    <select class="form-control"
+                      value={pageSize}
+                      onChange={(e) => setPageSize(Number(e.target.value))}
+                    >
+                      {[5, 10, 15].map((pageSize) => (
+                        <option key={pageSize} value={pageSize}>
+                          {pageSize !== 15 ? `Mostrar ${pageSize}` : `Mostrar todo`}
+                        </option>
+                      ))}
+                    </select>
+                  </Col>
                 </Row>
               </CardFooter>
             </Card>

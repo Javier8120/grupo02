@@ -19,7 +19,7 @@ import {
 
 class Modals extends React.Component {
     state = {
-        exampleModal: false
+        EliminarClienteModal: false
     };
     toggleModal = state => {
         this.setState({
@@ -29,50 +29,47 @@ class Modals extends React.Component {
     render() {
         return (
             <>
-                {/* Button trigger modal */}
-                
-                    <Button
-                        color="primary"
-                        type="button"
-                        onClick={() => this.toggleModal("exampleModal")}
-                        
+            <Button
+                color="warning"
+                 type="button"
+                onClick={() => this.toggleModal("EliminarClienteModal")}   
                     >
-                        Eliminar
-                    </Button>
+                <i class="fas fa-times"></i>
+             </Button>
                 
 
                 {/* Modal */}
                 <Modal
                     className="modal-dialog-centered"
-                    isOpen={this.state.exampleModal}
-                    toggle={() => this.toggleModal("exampleModal")}
+                    isOpen={this.state.EliminarClienteModal}
+                    toggle={() => this.toggleModal("EliminarClienteModal")}
                 >
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">
-                            Modal title
+                        <h5 className="modal-title" id="EliminarClienteModalLabel">
+                            Eliminar Cliente (Usuario)
                         </h5>
                         <button
                             aria-label="Close"
                             className="close"
                             data-dismiss="modal"
                             type="button"
-                            onClick={() => this.toggleModal("exampleModal")}
+                            onClick={() => this.toggleModal("EliminarClienteModal")}
                         >
                             <span aria-hidden={true}>×</span>
                         </button>
                     </div>
-                    <div className="modal-body">...</div>
+                    <div className="modal-body">Estas seguro que deseas eliminar este usuario?</div>
                     <div className="modal-footer">
                         <Button
                             color="secondary"
                             data-dismiss="modal"
                             type="button"
-                            onClick={() => this.toggleModal("exampleModal")}
+                            onClick={() => this.toggleModal("EliminarClienteModal")}
                         >
-                            Close
+                            No
                         </Button>
                         <Button color="primary" type="button">
-                            Save changes
+                            Ok, Toi seguro
                         </Button>
                     </div>
                 </Modal>

@@ -25,6 +25,14 @@ export default function useColumns() {
         Header: "Correo",
         accessor: "correo"
       },
+      {
+        Header: "Editar",
+        accessor: "editar"
+      },
+       {
+        Header: "Eliminar",
+        accessor: "eliminar"
+      },
       
      
    ],
