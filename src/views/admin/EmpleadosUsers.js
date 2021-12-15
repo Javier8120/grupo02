@@ -1,165 +1,231 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// reactstrap components
 import {
-  
-    Badge,
-    Card,
-    CardHeader,
-    CardFooter,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    Media,
-    Pagination,
-    PaginationItem,
-    PaginationLink,
-    Progress,
-    Table,
-    Container,
-    Row,
-    Col,
-    Button,
-    UncontrolledTooltip,
-  } from "reactstrap";
-  // core components
-  import Header from "components/Headers/Header.js";
-  
-  const EmpleadosUsers = () => {
-    return (
-      <>
-        <Header />
-        {/* Page content */}
-        <Container className="mt--7" fluid>
-          {/* Dark table */}
-          <Row className="mt-5">
-            <div className="col">
-              <Card className="bg-default shadow">
-                <CardHeader className="bg-transparent border-0">
-                  <Row className="align-items-center">
-                    <Col xs="8">
-                      <h3 className="text-white mb-0">Empleados</h3>
-                    </Col>
-                     <Col className="text-right" xs="4">
-                      <Button
-                        color="primary"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                        size="sm"
-                      >
-                      Agregar
-                      </Button>
-                    </Col> 
-                  </Row>
-                </CardHeader>
-                <Table
-                  className="align-items-center table-dark table-flush"
-                  responsive
-                >
-                  <thead className="thead-dark">
-                    <tr>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Apellido</th>
-                      <th scope="col">Tipo Identificacion</th>
-                      <th scope="col">Identificacion</th>
-                      <th scope="col">Correo</th>
-                      <th scope="col" />
-                    </tr>
-                  </thead>
-                  <tbody >
-                    <tr>
-                      <th scope="row">
-                            <span className="mb-0 text-sm">
-                              Javier Fernando
-                            </span> 
-                      </th>
-                      <td>Moreno Rodriguez</td>
-                      <td>
-                        <Badge color="" className="badge-dot mr-4">
-                          <i className="bg-warning" />
-                          Cedula de Ciudadania
-                        </Badge>
-                      </td>
-                      <td>
-                        1000283962
-                      </td>
-                      <td>
-                        morenofj@uninorte.edu.co
-                      </td>
-                      <td className="text-right">
-                        <UncontrolledDropdown>
-                          <DropdownToggle
-                            className="btn-icon-only text-light"
-                            href="#Javier"
-                            role="button"
-                            size="sm"
-                            color=""
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            <i className="fas fa-ellipsis-v" />
-                          </DropdownToggle>
-                          <DropdownMenu className="dropdown-menu-arrow" right>
-                            <DropdownItem
-                              href="#javier"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              EDITAR
-                            </DropdownItem>
-                            <DropdownItem
-                              href="#javier"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              ELIMINAR
-                            </DropdownItem>
-                            {/* <DropdownItem
-                              href="#javier"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              AGREGAR
-                            </DropdownItem> */}
-                          </DropdownMenu>
-                        </UncontrolledDropdown>
-                      </td>
-                    </tr>
-                    <td></td>
-                    <tr>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                    </tr>
-                    
-                  </tbody>
-                </Table>
-              </Card>
-            </div>
-          </Row>
-        </Container>
-      </>
-    );
+  Badge,
+  Card,
+  CardHeader,
+  CardFooter,
+  DropdownMenu,
+  DropdownItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  Media,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
+  Progress,
+  Table,
+  Container,
+  Row,
+  Col,
+  Button,
+  UncontrolledTooltip,
+  Form,
+  FormGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input,
+  InputGroup,
+
+
+} from "reactstrap";
+// core components
+
+import { useState} from "react";
+import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
+import useRows from "components/Tables/FilasA.js";  /// Cuando se haga uso del back en se llamara la lista correspondiente.
+import useColumns from "components/Tables/ColumnasA.js";
+import Header from "components/Headers/Header.js";
+function EmpleadosFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
+  const totalEmpleados = preGlobalFilteredRows.length;
+  const [value, setValue] = useState(globalFilter);
+
+  const onFilterChange = useAsyncDebounce(
+    (value) => setGlobalFilter(value || undefined),
+
+  );
+
+  const handleInputChange = (e) => {
+    setValue(e.target.value);
+    onFilterChange(e.target.value);
+
   };
-  
-  export default EmpleadosUsers;
-  
+
+  return (
+
+
+
+    <CardHeader className="bg-transparent border-0">
+      <Row className="align-items-center">
+        <Col xs="4">
+          <h3 className="text-white mb-0">Empleado</h3>
+        </Col>
+        <Col className="text-right" xs="4">
+
+          <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+            <FormGroup className="mb-0">
+              <InputGroup className="input-group-alternative">
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <i className="fas fa-search" />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input
+                  size={30}
+                  value={value || ""}
+                  onChange={handleInputChange}
+                  placeholder={`${totalEmpleados} Empleados registrados`}
+                />
+              </InputGroup>
+            </FormGroup>
+          </Form>
+
+        </Col>
+        <Col className="text-right" xs="4">
+          <Button
+            color="primary"
+            href="#Javier"
+            onClick={(e) => e.preventDefault()}
+            size="sm"
+          >
+            Agregar
+          </Button>
+        </Col>
+      </Row>
+    </CardHeader>
+
+
+
+  );
+}
+
+function EmpleadoUsers() {
+  const columns = useColumns();
+  const data = useRows();
+  const table = useTable(
+    {
+      columns,
+      data,
+      initialState: {
+        PageSize: 5,
+        pageIndex: 0,
+      }
+    },
+    useGlobalFilter,
+    usePagination
+  );
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    prepareRow,
+    page,
+    canPreviousPage,
+    canNextPage,
+    pageOptions,
+    pageCount,
+    gotoPage,
+    nextPage,
+    previousPage,
+    setPageSize,
+    rows,
+    preGlobalFilteredRows,
+    setGlobalFilter,
+    state: { pageIndex, pageSize, globalFilter }
+  } = table;
+
+  return (
+    <>
+      <Header />
+      <Container className="mt--8" fluid>
+        <Row className="mt-5">
+          <div className="col">
+            <Card className="bg-default shadow">
+              <EmpleadosFiltro
+                preGlobalFilteredRows={preGlobalFilteredRows}
+                globalFilter={globalFilter}
+                setGlobalFilter={setGlobalFilter}
+              />
+
+              <Table {...getTableProps()} className="align-items-center table-dark table-flush"
+                responsive
+              >
+                <thead className="thead-dark">
+
+                  {headerGroups.map((headerGroup) => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup.headers.map((column) => (
+                        <th scope="col" {...column.getHeaderProps()}>{column.render("Header")}</th>
+                      ))}
+                    </tr>
+                  ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                  {
+                    page.map((row) => {
+                    prepareRow(row);
+                    return (
+                      <tr {...row.getRowProps()}>
+                        {row.cells.map((cell) => (
+                          <th scope="row" {...cell.getCellProps()}>{cell.render("Cell")}</th>
+                        ))}
+                        
+                      </tr>
+                    );
+                  })}
+
+                </tbody>
+              </Table>
+              <CardFooter className="bg-transparent border-0">
+                <Row className="align-items-center">
+                <Col xs="4">
+                <h2>Página
+                  <strong>
+                    {" "}
+                    {pageIndex + 1} de {pageOptions.length}
+                  </strong>{" "}
+                </h2>
+              </Col>
+              <Col xs="4">
+                <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage} className="mt-4" color="primary">
+                  <i class="fas fa-angle-double-left"></i>
+                </Button>{" "}
+                <Button onClick={() => previousPage()} disabled={!canPreviousPage} className="mt-4" color="primary">
+                <i class="fas fa-angle-left"></i>
+                </Button>{" "}
+                <Button onClick={() => nextPage()} disabled={!canNextPage} className="mt-4" color="primary">
+                <i class="fas fa-angle-right"></i>
+                </Button>{" "}
+                <Button className="mt-4" color="primary"
+                  onClick={() => gotoPage(pageCount - 1)}
+                  disabled={!canNextPage}
+                  
+                >
+                  <i class="fas fa-angle-double-right"></i>
+                </Button>{" "}
+              </Col>
+              <Col xs="4">
+                <select  class="form-control"
+                  value={pageSize}
+                  onChange={(e) => setPageSize(Number(e.target.value))}
+                >
+                  {[5, 10, 15].map((pageSize) => (
+                    <option key={pageSize} value={pageSize}>
+                      {pageSize !== 15 ? `Mostrar ${pageSize}` : `Mostrar todo`}
+                    </option>
+                  ))}
+                </select>
+              </Col>
+              <Col xs="4">
+
+              </Col>
+                </Row>
+              </CardFooter>
+            </Card>
+          </div>
+        </Row>
+      </Container>
+    </>
+  );
+}
+
+export default EmpleadoUsers

@@ -68,7 +68,7 @@ const Cliente = (props) => {
     <>
      {/*  <Sidebar
         {...props}
-        routes={routes}
+        routes={routes}    
         logo={{
           innerLink: "/cliente/index",
           imgSrc: require("../assets/img/brand/BANCO2.png").default,

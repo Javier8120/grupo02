@@ -16,7 +16,7 @@
 
 */
 import Index from "views/client/Index.js";
-import SolicitarCredito from "views/client/SolicitarCredito.js";
+/* import SolicitarCredito from "views/client/SolicitarCredito.js"; */
 import Historial from "views/client/GestionarCredito/Historial.js";
 import Pagar from "views/client/GestionarCredito/PagaCuota.js";
 /* import HistorialDePagos from "views/ClienteExample/HistorialDePagos.js";
@@ -36,7 +36,7 @@ var routes = [
     layout: "/cliente",
     invisible: true,
   },
- 
+ /* 
   {
     path: "/solicitar-credito",
     name: "Credito Educativo",
@@ -44,7 +44,7 @@ var routes = [
     component: SolicitarCredito,
     layout: "/cliente",
     invisible: true,
-  },
+  }, */
   {
     path: "/historial-de-pagos",
     name: "Historial de Pagos",
