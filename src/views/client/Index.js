@@ -65,17 +65,107 @@ const Index = (props) => {
     <>
       <Header />
       {/* Page content */}
-      <Container className="mt--7" fluid>
+      <Container className="mt--8" fluid>
+
+      <Row className="mt-3">
+          <Col className="mb-0 mb-xl-4" xl="8">
+            <Card className="shadow">
+              <CardHeader className="border-0">
+                <Row className="align-items-center">
+                  <div className="col">
+                    <h3 className="mb-0 text-center">Ultimos Movimientos</h3>
+              
+                  </div>
+                </Row>
+              </CardHeader>
+              <Table className="align-items-center table-flush text-center" responsive>
+                <thead className="thead-dark">
+                  <tr>
+                    <th scope="col">Dia-Mes-Año</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Valor Pagado</th>
+                    <th scope="col">Numero de Transaccion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">15/12/2020</th>
+                    <td>Bogota</td>
+                    <td>80.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 46538990
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12/02/2021</th>
+                    <td>Madrid</td>
+                    <td>80.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 46909867
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12/04/2021</th>
+                    <td>Barranquilla</td>
+                    <td>82.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 47784969
+                      
+                    </td>
+                  </tr>
+                   <tr>
+                    <th scope="row">12/04/2021</th>
+                    <td>Barranquilla</td>
+                    <td>82.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 47784969
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12/04/2021</th>
+                    <td>Barranquilla</td>
+                    <td>82.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 47784969
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14/06/2021</th>
+                    <td>Madrid</td>
+                    <td>85.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 48433481
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13/08/2021</th>
+                    <td>Cali</td>
+                    <td>89.000</td>
+                    <td>
+                      <i className="fas fa-arrow-up text-success mr-3" /> 49692495
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Card>
+          </Col>
+          
+        </Row>
+
         <Row>
-          <Col className="mb-5 mb-xl-0" xl="8">
+          <Col className="mb-5 mb-xl-4" xl="8">
             <Card className="bg-gradient-default shadow">
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
                   <div className="col">
                     <h6 className="text-uppercase text-light ls-1 mb-1">
-                      Overview
+                      Grafica Cuotas Pagadas.
                     </h6>
-                    <h2 className="text-white mb-0">Sales value</h2>
+                    <h2 className="text-white mb-0">Monto Acomulado</h2>
                   </div>
                   <div className="col">
                     <Nav className="justify-content-end" pills>
@@ -87,7 +177,7 @@ const Index = (props) => {
                           href="#pablo"
                           onClick={(e) => toggleNavs(e, 1)}
                         >
-                          <span className="d-none d-md-block">Month</span>
+                          <span className="d-none d-md-block">Meses</span>
                           <span className="d-md-none">M</span>
                         </NavLink>
                       </NavItem>
@@ -100,7 +190,7 @@ const Index = (props) => {
                           href="#pablo"
                           onClick={(e) => toggleNavs(e, 2)}
                         >
-                          <span className="d-none d-md-block">Week</span>
+                          <span className="d-none d-md-block">Semanas</span>
                           <span className="d-md-none">W</span>
                         </NavLink>
                       </NavItem>
@@ -120,15 +210,16 @@ const Index = (props) => {
               </CardBody>
             </Card>
           </Col>
+
           <Col xl="4">
             <Card className="shadow">
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
                   <div className="col">
                     <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Performance
+                      Dinero Abonado
                     </h6>
-                    <h2 className="mb-0">Total Creditos solicitados</h2>
+                    <h2 className="mb-0">Total De Dinero Abonado</h2>
                   </div>
                 </Row>
               </CardHeader>
@@ -144,192 +235,85 @@ const Index = (props) => {
             </Card>
           </Col>
         </Row>
-        <Row className="mt-5">
-          <Col className="mb-5 mb-xl-0" xl="8">
+
+        <Row className="mt-3">
+          <Col className="mb-0 mb-xl-4" xl="12">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Prueba</h3>
+                    <h3 className="mb-0 text-center">Solicitar Prorroga.</h3>
+                    <form>
+                  <div className="form-group">
+                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
+                    <textarea className="form-control" name="content" placeholder="Cuentamos porque razon solicitaras una prorroga de tus cuotas" rows="7"></textarea>
                   </div>
-                  <div className="col text-right">
-                    <Button
-                      color="primary"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="sm"
-                    >
-                      See all
-                    </Button>
+                  <div className="form-group text-center">
+                  <label htmlfor="Aplazar ">¿Cuantas Cuotas Desea Aplazar?</label>
                   </div>
+
+                  <div className="form-group">
+                  <center>  
+                  <select>
+
+                    <option value={""}>-Selecciona Un Numero-</option>
+                    <option value={"1"}>01</option>
+                    <option value={"2"}>02</option>
+                    <option value={"3"}>03</option>
+                    <option value={"4"}>04</option>
+                    <option value={"5"}>05</option>
+                    <option value={"6"}>06</option>
+                    <option value={"7"}>07</option>
+                    <option value={"8"}>08</option>
+                    <option value={"9"}>09</option>
+                    <option value={"10"}>10</option>
+                    <option value={"11"}>11</option>
+                    <option value={"12"}>12</option>
+                    <option value={"13"}>13</option>
+                    <option value={"14"}>14</option>
+                    <option value={"15"}>15</option>
+
+                  </select>
+                  </center>   
+                  </div>
+                  
+                  <div className="form-group text-center">
+                    <button type="button" className="btn btn-primary btn-lg">Solicitar</button>
+                  </div>
+                  
+                  </form>
+                  </div>
+                  
                 </Row>
               </CardHeader>
-              <Table className="align-items-center table-flush" responsive>
-                <thead className="thead-light">
-                  <tr>
-                    <th scope="col">Page name</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col">Unique users</th>
-                    <th scope="col">Bounce rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">/argon/</th>
-                    <td>4,569</td>
-                    <td>340</td>
-                    <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/index.html</th>
-                    <td>3,985</td>
-                    <td>319</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/charts.html</th>
-                    <td>3,513</td>
-                    <td>294</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      36,49%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/tables.html</th>
-                    <td>2,050</td>
-                    <td>147</td>
-                    <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 50,87%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/profile.html</th>
-                    <td>1,795</td>
-                    <td>190</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-danger mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-            </Card>
-          </Col>
-          <Col xl="4">
-            <Card className="shadow">
-              <CardHeader className="border-0">
-                <Row className="align-items-center">
-                  <div className="col">
-                    <h3 className="mb-0">Social traffic</h3>
-                  </div>
-                  <div className="col text-right">
-                    <Button
-                      color="primary"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="sm"
-                    >
-                      See all
-                    </Button>
-                  </div>
-                </Row>
-              </CardHeader>
-              <Table className="align-items-center table-flush" responsive>
-                <thead className="thead-light">
-                  <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col" />
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Facebook</th>
-                    <td>1,480</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">60%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="60"
-                            barClassName="bg-gradient-danger"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Facebook</th>
-                    <td>5,480</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">70%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="70"
-                            barClassName="bg-gradient-success"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Google</th>
-                    <td>4,807</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">80%</span>
-                        <div>
-                          <Progress max="100" value="80" />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Instagram</th>
-                    <td>3,678</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">75%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="75"
-                            barClassName="bg-gradient-info"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">twitter</th>
-                    <td>2,645</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">30%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="30"
-                            barClassName="bg-gradient-warning"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
             </Card>
           </Col>
         </Row>
+
+
+        <Row className="mt-3">
+          <Col className="mb-0 mb-xl-4" xl="12">
+            <Card className="shadow">
+              <CardHeader className="border-0">
+                <Row className="align-items-center">
+                  <div className="col">
+                    <h3 className="mb-0 text-center">Certificado.</h3>
+                  
+                  <nav className="form-group text-center">
+                    <button type="button" className="btn btn-primary btn-lg">Vista Previa</button>
+                   
+                  
+                    <button type="button" className="btn btn-primary btn-lg">Descarga Tu Certificado.</button>
+                     
+
+                  </nav>
+                  </div>
+                </Row>
+              </CardHeader>
+            </Card>
+          </Col>
+        </Row>
+
       </Container>
     </>
   );

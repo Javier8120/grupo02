@@ -53,7 +53,7 @@ const Header = () => {
                       <span className="text-success mr-2">
                         <i className="ni ni-credit-card" /> 
                       </span>{" "}
-                      <span className="text-nowrap">Total pagado: $$$$ </span>
+                      <span className="text-nowrap">Valor Total del Credito Faltante: $$$$ </span>
                     </p>
                   </CardBody>
                 </Card>
@@ -67,7 +67,7 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Cuotas adeudadas
+                          Cuotas Pagadas
                         </CardTitle>
                         <span className="h2 font-weight-bold mb-0">8</span>
                       </div>
@@ -81,7 +81,7 @@ const Header = () => {
                       <span className="text-danger mr-2">
                       <i className="ni ni-credit-card" />
                       </span>{" "}
-                      <span className="text-nowrap">Se adeudan: $$$$</span>
+                      <span className="text-nowrap">Valor Total del Credito Pagado: $$$$</span>
                     </p>
                   </CardBody>
                 </Card>

@@ -36,6 +36,14 @@ var routes = [
     layout: "/empleado",
     invisible: true,
   },
+ /* {
+    path: "/index",
+    name: "Inicio",
+    icon: "ni ni-tv-2 text-primary",
+    component: Index,
+    layout: "/empleado",
+    invisible: true,
+  },*/
  
   {
     path: "/gestionar-creditos",

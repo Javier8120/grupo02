@@ -41,11 +41,11 @@ const ClientNavbar = (props) => {
         <Container fluid>
           <Link
             className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-            to="/">
+            to="/cliente/index">
             {props.brandText}
           </Link>
           <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-            <FormGroup className="mb-0">
+            <FormGroup className="mb-0  ">
               <InputGroup className="input-group-alternative">
                 <InputGroupAddon addonType="prepend">
                   <InputGroupText>
@@ -78,7 +78,7 @@ const ClientNavbar = (props) => {
               </DropdownToggle>
               <DropdownMenu className="dropdown-menu-arrow" right>
                 <DropdownItem className="noti-title" header tag="div">
-                  <h6 className="text-overflow m-0">Welcome!</h6>
+                  <h6 className="text-overflow m-0">Bievenido(a)</h6>
                 </DropdownItem>
                 <DropdownItem to="/cliente/user-profile" tag={Link}>
                   <i className="ni ni-single-02" />
