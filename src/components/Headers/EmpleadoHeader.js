@@ -36,10 +36,10 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Cuotas Restantes
+                          Solicitudes de Prorroga
                         </CardTitle>
                         <span className="h2 font-weight-bold mb-0">
-                          8
+                          2
                         </span>
                       </div>
                       <Col className="col-auto">
@@ -51,9 +51,9 @@ const Header = () => {
                     <p className="mt-3 mb-0 text-muted text-sm">
                       {" "}
                       <span className="text-success mr-2">
-                        <i className="ni ni-credit-card" /> 
+                        <i className="ni ni-bold-right" /> 
                       </span>{" "}
-                      <span className="text-nowrap">Total pagado: $$$$ </span>
+                      <span className="text-nowrap">Totalidad por Prorrogas: $$$$ </span>
                     </p>
                   </CardBody>
                 </Card>
@@ -67,9 +67,9 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Cuotas adeudadas
+                          Volumen Crediticio
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">8</span>
+                        <span className="h2 font-weight-bold mb-0">3</span>
                       </div>
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -79,9 +79,9 @@ const Header = () => {
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
                       <span className="text-danger mr-2">
-                      <i className="ni ni-credit-card" />
+                      <i className="ni ni-chart-bar-32" />
                       </span>{" "}
-                      <span className="text-nowrap">Se adeudan: $$$$</span>
+                      <span className="text-nowrap">Valor de creditos: $$$$</span>
                     </p>
                   </CardBody>
                 </Card>
@@ -95,9 +95,9 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Total Cuotas Credito
+                          Creditos Solicitados
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">16</span>
+                        <span className="h2 font-weight-bold mb-0">4</span>
                       </div>
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -109,7 +109,7 @@ const Header = () => {
                       <span className="text-warning mr-2">
                         <i className="ni ni-credit-card" />
                       </span>{" "}
-                      <span className="text-nowrap">valor cuota: $$$$</span>
+                      <span className="text-nowrap">Valor: $$$$</span>
                     </p>
                   </CardBody>
                 </Card>

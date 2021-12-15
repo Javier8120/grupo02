@@ -46,6 +46,7 @@ function EmpleadosFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter 
   const handleInputChange = (e) => {
     setValue(e.target.value);
     onFilterChange(e.target.value);
+
   };
 
   return (

@@ -73,9 +73,9 @@ const Index = (props) => {
                 <Row className="align-items-center">
                   <div className="col">
                     <h6 className="text-uppercase text-light ls-1 mb-1">
-                      Overview
+                      Vistas
                     </h6>
-                    <h2 className="text-white mb-0">Sales value</h2>
+                    <h2 className="text-white mb-0">Valores</h2>
                   </div>
                   <div className="col">
                     <Nav className="justify-content-end" pills>
@@ -87,7 +87,7 @@ const Index = (props) => {
                           href="#pablo"
                           onClick={(e) => toggleNavs(e, 1)}
                         >
-                          <span className="d-none d-md-block">Month</span>
+                          <span className="d-none d-md-block">Mensual</span>
                           <span className="d-md-none">M</span>
                         </NavLink>
                       </NavItem>
@@ -100,8 +100,8 @@ const Index = (props) => {
                           href="#pablo"
                           onClick={(e) => toggleNavs(e, 2)}
                         >
-                          <span className="d-none d-md-block">Week</span>
-                          <span className="d-md-none">W</span>
+                          <span className="d-none d-md-block">Semanal</span>
+                          <span className="d-md-none">S</span>
                         </NavLink>
                       </NavItem>
                     </Nav>
@@ -126,7 +126,7 @@ const Index = (props) => {
                 <Row className="align-items-center">
                   <div className="col">
                     <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Performance
+                      Rendimiento
                     </h6>
                     <h2 className="mb-0">Total Creditos solicitados</h2>
                   </div>
@@ -150,7 +150,7 @@ const Index = (props) => {
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Prueba</h3>
+                    <h3 className="mb-0">Estadistica general</h3>
                   </div>
                   <div className="col text-right">
                     <Button
@@ -159,7 +159,7 @@ const Index = (props) => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      See all
+                      ver
                     </Button>
                   </div>
                 </Row>
@@ -167,31 +167,31 @@ const Index = (props) => {
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">Page name</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col">Unique users</th>
-                    <th scope="col">Bounce rate</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Creditos Aprobados</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Cantidad Sin Pagar</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">/argon/</th>
-                    <td>4,569</td>
-                    <td>340</td>
+                    <th scope="row">Pedro</th>
+                    <td>4</td>
+                    <td>Pedrosalazar123@gmail.com</td>
                     <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
+                      {/* <i className="fas fa-arrow-up text-success mr-3" />*/}1
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">/argon/index.html</th>
-                    <td>3,985</td>
-                    <td>319</td>
+                    <th scope="row">Jessica</th>
+                    <td>6</td>
+                    <td>Jessyfernandez@gmail.com</td>
                     <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      46,53%
+                      {/* <i className="fas fa-arrow-down text-warning mr-3" />{" "} */}
+                      2
                     </td>
                   </tr>
-                  <tr>
+{/*                   <tr>
                     <th scope="row">/argon/charts.html</th>
                     <td>3,513</td>
                     <td>294</td>
@@ -216,7 +216,7 @@ const Index = (props) => {
                       <i className="fas fa-arrow-down text-danger mr-3" />{" "}
                       46,53%
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </Table>
             </Card>
@@ -226,7 +226,7 @@ const Index = (props) => {
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Social traffic</h3>
+                    <h3 className="mb-0">Solicitudes de Pago</h3>
                   </div>
                   <div className="col text-right">
                     <Button
@@ -235,7 +235,7 @@ const Index = (props) => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      See all
+                      ver
                     </Button>
                   </div>
                 </Row>
@@ -243,22 +243,22 @@ const Index = (props) => {
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col" />
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Monto Total a pagar</th>
+                    <th scope="col">Cantidad Pagada</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Facebook</th>
-                    <td>1,480</td>
+                    <th scope="row">Willian estrada</th>
+                    <td>1,480,000 $</td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">60%</span>
+                        <span className="mr-2">50%</span>
                         <div>
                           <Progress
                             max="100"
-                            value="60"
+                            value="50"
                             barClassName="bg-gradient-danger"
                           />
                         </div>
@@ -266,22 +266,22 @@ const Index = (props) => {
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">Facebook</th>
-                    <td>5,480</td>
+                    <th scope="row">Karen Espinosa</th>
+                    <td>5,480,000 $</td>
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">70%</span>
+                        <span className="mr-2">96%</span>
                         <div>
                           <Progress
                             max="100"
-                            value="70"
+                            value="96"
                             barClassName="bg-gradient-success"
                           />
                         </div>
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <th scope="row">Google</th>
                     <td>4,807</td>
                     <td>
@@ -324,7 +324,7 @@ const Index = (props) => {
                         </div>
                       </div>
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </Table>
             </Card>

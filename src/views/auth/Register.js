@@ -81,7 +81,7 @@ const Register = () => {
           </CardHeader> */}
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>Registro</small>
+              <small>Solicitud de Credito</small>
             </div>
             <Form role="form">
               <FormGroup>

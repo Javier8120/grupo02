@@ -27,6 +27,7 @@ import GenerarHistorial from "views/empleado/GenerarHistorial.js"
 import Prorroga from "views/empleado/Prorroga"
 
 
+
 var routes = [
   {
     path: "/index",

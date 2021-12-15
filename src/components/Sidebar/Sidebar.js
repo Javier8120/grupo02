@@ -253,7 +253,7 @@ const Sidebar = (props) => {
               <NavItem>
                 <NavLink href="https://github.com/Javier8120/Equipo2">
                   <i className="ni ni-spaceship" />
-                  GitUp
+                  Github
                 </NavLink>
               </NavItem>
             </Nav>

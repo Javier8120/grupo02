@@ -80,7 +80,7 @@ import {
             </CardHeader> */}
             <CardBody className="px-lg-5 py-lg-5">
               <div className="text-center text-muted mb-4">
-                <h4>Login</h4> {/* Tenia etiqueta small */}
+                <h4>Iniciar Sesion</h4> {/* Tenia etiqueta small */}
               </div>
               <Form role="form">
                 <FormGroup className="mb-3">
@@ -126,7 +126,7 @@ import {
                 </div>
                 <div className="text-center">
                   <Button className="my-4" color="primary" type="button">
-                    Inciar Sesion 
+                    Iniciar Sesion 
                   </Button>
                 </div>
               </Form>
