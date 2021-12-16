@@ -22,9 +22,11 @@ import Prorroga from "views/EmpleadoExample/Prorroga.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js"; */
 import Index from "views/empleado/Index.js";
+import profile from  "views/empleado/Profile.js";
 import GenerarCreditos from "views/empleado/GenerarCreditos.js"
 import GenerarHistorial from "views/empleado/GenerarHistorial.js"
 import Prorroga from "views/empleado/Prorroga"
+import Profile from "views/admin/Profile";
 
 
 
@@ -37,14 +39,15 @@ var routes = [
     layout: "/empleado",
     invisible: true,
   },
- /* {
-    path: "/index",
-    name: "Inicio",
-    icon: "ni ni-tv-2 text-primary",
-    component: Index,
+
+ {
+    path: "/Profile",
+    name: "Perfil",
+    icon: "ni ni-circle-08",
+    component: Profile,
     layout: "/empleado",
     invisible: true,
-  },*/
+  },
  
   {
     path: "/gestionar-creditos",

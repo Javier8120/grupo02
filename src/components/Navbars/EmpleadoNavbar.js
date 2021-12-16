@@ -41,7 +41,7 @@ const AdminNavbar = (props) => {
         <Container fluid>
           <Link
             className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-            to="/admin/index">
+            to="/empleado/index">
             {props.brandText}
           </Link>
           <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -80,7 +80,7 @@ const AdminNavbar = (props) => {
                 <DropdownItem className="noti-title" header tag="div">
                   <h6 className="text-overflow m-0">Bienvenido(a)</h6>
                 </DropdownItem>
-                <DropdownItem to="/admin/Profile" tag={Link}>
+                <DropdownItem to="/empleado/Profile" tag={Link}>
                   <i className="ni ni-single-02" />
                   <span>Perfil</span>
                 </DropdownItem>

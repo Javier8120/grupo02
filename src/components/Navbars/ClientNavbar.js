@@ -52,7 +52,7 @@ const ClientNavbar = (props) => {
                     <i className="fas fa-search" />
                   </InputGroupText>
                 </InputGroupAddon>
-                <Input placeholder="Search" type="text" />
+                <Input placeholder="Buscar" type="text" />
               </InputGroup>
             </FormGroup>
           </Form>
@@ -81,9 +81,9 @@ const ClientNavbar = (props) => {
                  
 								<h6 className="text-overflow m-0">Bievenido(a)</h6>
                 </DropdownItem>
-                <DropdownItem to="/cliente/user-profile" tag={Link}>
+                <DropdownItem to="/client/Profile" tag={Link}>
                   <i className="ni ni-single-02" />
-                  <span>Mi Perfil</span>
+                  <span>Perfil</span>
                 </DropdownItem>
                {/*  <DropdownItem to="/admin/user-profile" tag={Link}>
                   <i className="ni ni-settings-gear-65" />
@@ -98,7 +98,11 @@ const ClientNavbar = (props) => {
                   <span>Soporte</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#javier" onClick={(e) => e.preventDefault()}>
+                {/* <DropdownItem href="#javier" onClick={(e) => e.preventDefault()}>
+                  <i className="ni ni-user-run" />
+                  <span>Cerrar Sesion</span>
+                </DropdownItem> */}
+                <DropdownItem to="/auth/Login" tag={Link}>
                   <i className="ni ni-user-run" />
                   <span>Cerrar Sesion</span>
                 </DropdownItem>
