@@ -41,7 +41,7 @@ const ClientNavbar = (props) => {
         <Container fluid>
           <Link
             className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-            to="/cliente/index">
+            to="/client/index">
             {props.brandText}
           </Link>
           <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -81,7 +81,7 @@ const ClientNavbar = (props) => {
                  
 								<h6 className="text-overflow m-0">Bievenido(a)</h6>
                 </DropdownItem>
-                <DropdownItem to="/client/Profile" tag={Link}>
+                <DropdownItem to="/cliente/Profile" tag={Link}>
                   <i className="ni ni-single-02" />
                   <span>Perfil</span>
                 </DropdownItem>

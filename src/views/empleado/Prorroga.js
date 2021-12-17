@@ -87,6 +87,7 @@ const Index = (props) => {
                   </div>
                 </Row>
               </CardHeader>
+              <CardBody>
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-dark">
                   <tr>
@@ -105,9 +106,10 @@ const Index = (props) => {
                   </tr>
 
                 </tbody>
-              </Table>
+              </Table></CardBody>
             </Card>
           </Col>
+          
           <Col xl="4">
           <Card className="bg-default shadow">
               <CardHeader className="bg-transparent border-0">
@@ -127,6 +129,7 @@ const Index = (props) => {
                   </div>
                 </Row>
               </CardHeader>
+              <CardBody>
               <Table className="align-items-center table-flush" responsive>
                 <thead className="thead-dark">
                   <tr>
@@ -213,7 +216,7 @@ const Index = (props) => {
                     </td>
                   </tr> */}
                 </tbody>
-              </Table>
+              </Table></CardBody>
             </Card>
           </Col>
         </Row>

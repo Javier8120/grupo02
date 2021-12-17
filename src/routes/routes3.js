@@ -22,11 +22,11 @@ import Prorroga from "views/EmpleadoExample/Prorroga.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js"; */
 import Index from "views/empleado/Index.js";
-import profile from  "views/empleado/Profile.js";
+import Profile from  "views/empleado/Profile.js";
 import GenerarCreditos from "views/empleado/GenerarCreditos.js"
 import GenerarHistorial from "views/empleado/GenerarHistorial.js"
 import Prorroga from "views/empleado/Prorroga"
-import Profile from "views/admin/Profile";
+// import Profile from "views/admin/Profile";
 
 
 
@@ -43,7 +43,7 @@ var routes = [
  {
     path: "/Profile",
     name: "Perfil",
-    icon: "ni ni-circle-08",
+    icon: "ni ni-circle-08 text-green",
     component: Profile,
     layout: "/empleado",
     invisible: true,
@@ -52,7 +52,7 @@ var routes = [
   {
     path: "/gestionar-creditos",
     name: "Gestionar Creditos",
-    icon: "ni ni-planet text-blue",
+    icon: "ni ni-planet text-yellow",
     component:GenerarCreditos,
     layout: "/empleado",
     invisible: true,
@@ -68,7 +68,7 @@ var routes = [
   {
     path: "/prorrogas",
     name: "Solicitudes de Prorrogas",
-    icon: "ni ni-single-02 text-yellow",
+    icon: "ni ni-single-02 text-blue",
     component: Prorroga,
     layout: "/empleado",
     invisible: true,

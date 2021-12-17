@@ -105,7 +105,7 @@ import {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Password"
+                      placeholder="Contraseña"
                       type="password"
                       autoComplete="new-password"
                     />
