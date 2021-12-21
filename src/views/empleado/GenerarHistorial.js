@@ -33,8 +33,8 @@ import {
 
 import { useState } from "react";
 import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
-import useRows from "components/Tables/Tablascliente/FilasA.js";
-import useColumns from "components/Tables/Tablascliente/ColumnasA.js";
+import useRows from "components/Tables/Tablasinterno/Filaspagos.js";
+import useColumns from "components/Tables/Tablasinterno/Columnaspagos";
 import Header from "components/Headers/EmpleadoHeader";
 //import AgregarCliente from "components/Modals/AgregarCliente.js"
 
@@ -60,7 +60,7 @@ function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }
     <CardHeader className="bg-transparent border-0">
       <Row className="align-items-center">
         <Col xs="4">
-          <h3 className="text-white mb-0">Clientes</h3>
+          <h3 className="text-white mb-0">Movimientos</h3>
         </Col>
         <Col className="text-right" xs="4">
 

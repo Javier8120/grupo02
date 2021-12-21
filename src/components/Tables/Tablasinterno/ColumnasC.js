@@ -5,17 +5,9 @@ export default function useColumns() {
     //tabla 1 (Clientes)
  const columns = useMemo(
    () => [
-    {
-      Header: "Nombre",
-      accessor: "nombre"
-    },
      {
-       Header: "Fecha",
-       accessor: "fecha"
-     },
-     {
-       Header: "Monto",
-       accessor: "monto"
+       Header: "Nombre del solicitante",
+       accessor: "nombre"
      },
      {
        Header: "Tipo de identificacion",
@@ -30,12 +22,20 @@ export default function useColumns() {
         accessor: "correo"
       },
       {
-        Header: "Informacion",
-        accessor: "info"
+        Header: "Valor del Credito",
+        accessor: "valor"
+      },
+      {
+        Header: "Estado de Aprobacion",
+        accessor: "estado"
+      },
+      {
+        Header: "Aceptar",
+        accessor: "aceptar"
       },
        {
-        Header: "Pagos",
-        accessor: "pagos"
+        Header: "Rechazar",
+        accessor: "rechazar"
       },
       
      

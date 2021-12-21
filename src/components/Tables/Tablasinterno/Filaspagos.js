@@ -1,117 +1,129 @@
 import { useMemo } from "react";
-import EditarCliente from "components/Modals/EditarCliente"
-import EliminarCliente from "components/Modals/EliminarCliente"
+import Historialinfo from "components/Modals/Historialinfo"
+import Pagos from "components/Modals/Pagos"
 //import AgregarCliente from "components/Modals/AgregarCliente.js"
 export default function useRows() {
  const rows = useMemo(
    () => [
      {
        nombre: "Fernando",
-       apellido: "Rodriguez",
+       fecha: "Rodriguez",
+       monto:"200.000",
        tidentificacion: "Cedula",
        identificacion: "12535",
        correo: "javier@gmail.com",
-       editar: <EditarCliente/>,
-       eliminar: <EliminarCliente/> 
+       info: <Historialinfo/>,
+       pagos: <Pagos/> 
      },
      {
         nombre: "Fernando",
-        apellido: "Rodriguez",
+        fecha: "Rodriguez",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "12535",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
        nombre: "Fernando",
-       apellido: "Rodriguez",
+       fecha: "Rodriguez",
+       monto:"200.000",
        tidentificacion: "Cedula",
        identificacion: "12535",
        correo: "javier@gmail.com",
-       editar: <EditarCliente/>,
-       eliminar: <EliminarCliente/> 
+       info: <Historialinfo/>,
+       pagos: <Pagos/> 
      },
      {
        nombre: "Rodriguez",
-       apellido: "Moreno",
+       fecha: "Moreno",
+       monto:"200.000",
        tidentificacion: "Cedula",
        identificacion: "15515",
        correo: "javier@gmail.com",
-       editar: <EditarCliente/>,
-       eliminar: <EliminarCliente/> 
+       info: <Historialinfo/>,
+       pagos: <Pagos/> 
      },
      {
         nombre: "Rodriguez",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "150015",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
         nombre: "Rodriguez",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "1000283965",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
         nombre: "Rodriguez",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "1515",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
         nombre: "Rodriguez",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "1515",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
         nombre: "Rodriguez",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "1515",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
         nombre: "Rodriguez",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "1515",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       },
       {
        nombre: "Rodriguez",
-       apellido: "Moreno",
+       fecha: "Moreno",
+       monto:"200.000",
        tidentificacion: "Cedula",
        identificacion: "1515",
        correo: "javier@gmail.com",
-       editar: <EditarCliente/>,
-       eliminar: <EliminarCliente/> 
+       info: <Historialinfo/>,
+       pagos: <Pagos/> 
      },
      {
         nombre: "Fernando",
-        apellido: "Moreno",
+        fecha: "Moreno",
+        monto:"200.000",
         tidentificacion: "Cedula",
         identificacion: "1515",
         correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
+        info: <Historialinfo/>,
+        pagos: <Pagos/> 
       }
    ],
    []
