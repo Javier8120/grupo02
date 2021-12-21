@@ -24,8 +24,8 @@ import Maps from "views/examples/Maps.js";
 */
 
 import Index from "views/admin/Index";
-import Register from "views/auth/Register.js";
-import Login from "views/auth/Login.js";
+import { Register } from "views/auth/Register.jsx";
+import { Login } from "views/auth/Login.jsx";
 import ClientUsers from  "views/admin/ClientUsers"
 import EmpleadosUsers from "views/admin/EmpleadosUsers"
 import Profile from "views/admin/Profile.js"
