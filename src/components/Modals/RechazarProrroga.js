@@ -58,7 +58,7 @@ class Modals extends React.Component {
                             <span aria-hidden={true}>×</span>
                         </button>
                     </div>
-                    <div className="modal-body"> Deseas Rechazar Prorroga del Usuario?</div>
+                    <div className="modal-body"> Deseas Recharzar Prorroga del Usuario?</div>
                     <div className="modal-footer">
                         <Button
                             color="secondary"

@@ -164,7 +164,7 @@ import {
                               className="form-control-label"
                               htmlFor="input-username"
                             >
-                              Nombre 
+                              Nombre de Usuario
                             </label>
                             <Input
                               className="form-control-alternative"
@@ -199,11 +199,11 @@ import {
                               className="form-control-label"
                               htmlFor="input-first-name"
                             >
-                              Apellido
+                              Nombre
                             </label>
                             <Input
                               className="form-control-alternative"
-                              defaultValue="redfield"
+                              defaultValue="Lucy"
                               id="input-first-name"
                               placeholder="First name"
                               type="text"
@@ -211,7 +211,7 @@ import {
                           </FormGroup>
                         </Col>
                         <Col lg="6">
-                          {/* <FormGroup>
+                          <FormGroup>
                             <label
                               className="form-control-label"
                               htmlFor="input-last-name"
@@ -225,7 +225,7 @@ import {
                               placeholder="Last name"
                               type="text"
                             />
-                          </FormGroup> */}
+                          </FormGroup>
                         </Col>
                       </Row>
                     </div>

@@ -71,7 +71,7 @@ class Modals extends React.Component {
                   <Input placeholder="Apellidos" type="text" />
                 </InputGroup>
               </FormGroup>
-              {/* <FormGroup>
+              <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
@@ -80,7 +80,7 @@ class Modals extends React.Component {
                   </InputGroupAddon>
                   <Input placeholder="Nombre de Usuario" type="text" />
                 </InputGroup>
-              </FormGroup> */}
+              </FormGroup>
               <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
@@ -204,10 +204,10 @@ class Modals extends React.Component {
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-chart-bar-32" />
+                      <i className="ni ni-fat-delete" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Valor Neto mensual" type="number" />
+                  <Input placeholder="Valor Matricula Educativa" type="number" />
                 </InputGroup>
               </FormGroup>
 
@@ -241,7 +241,7 @@ class Modals extends React.Component {
                   />                  
                 </InputGroup>
               </FormGroup>
-              {/* <FormGroup>
+              <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
@@ -256,7 +256,7 @@ class Modals extends React.Component {
                           type="text"
                         />
                 </InputGroup>
-              </FormGroup> */}
+              </FormGroup>
               <div className="text-center">
                 <Button className="mt-4" color="success" type="button">
                   Guardar Cambios

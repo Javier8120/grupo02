@@ -30,12 +30,12 @@ export default function useColumns() {
         accessor: "correo"
       },
       {
-        Header: "Informacion",
-        accessor: "info"
+        Header: "Editar",
+        accessor: "editar"
       },
        {
-        Header: "Pagos",
-        accessor: "pagos"
+        Header: "Eliminar",
+        accessor: "eliminar"
       },
       
      
