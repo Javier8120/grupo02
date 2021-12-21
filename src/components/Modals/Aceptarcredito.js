@@ -19,7 +19,7 @@ import {
 
 class Modals extends React.Component {
     state = {
-        RechazarProrrogaModal: false
+        AceptarCraditoModal: false
     };
     toggleModal = state => {
         this.setState({
@@ -30,46 +30,46 @@ class Modals extends React.Component {
         return (
             <>
             <Button
-                color="warning"
+                color="primary"
                  type="button"
-                onClick={() => this.toggleModal("RechazarProrrogaModal")}   
+                onClick={() => this.toggleModal("AceptarCraditoModal")}   
                     >
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
              </Button>
                 
 
                 {/* Modal */}
                 <Modal
                     className="modal-dialog-centered"
-                    isOpen={this.state.RechazarProrrogaModal}
-                    toggle={() => this.toggleModal("RechazarProrrogaModal")}
+                    isOpen={this.state.AceptarCraditoModal}
+                    toggle={() => this.toggleModal("AceptarCraditoModal")}
                 >
                     <div className="modal-header">
-                        <h5 className="modal-title" id="RechazarProrrogaModalLabel">
-                             Rechazar Prorroga 
+                        <h5 className="modal-title" id="AceptarCraditoModalLabel">
+                             Aceptar Credito 
                         </h5>
                         <button
                             aria-label="Close"
                             className="close"
                             data-dismiss="modal"
                             type="button"
-                            onClick={() => this.toggleModal("RechazarProrrogaModal")}
+                            onClick={() => this.toggleModal("AceptarCraditoModal")}
                         >
                             <span aria-hidden={true}>×</span>
                         </button>
                     </div>
-                    <div className="modal-body"> Deseas Rechazar Prorroga del Usuario?</div>
+                    <div className="modal-body">Aceptar Credito?</div>
                     <div className="modal-footer">
                         <Button
                             color="secondary"
                             data-dismiss="modal"
                             type="button"
-                            onClick={() => this.toggleModal("RechazarProrrogaModal")}
+                            onClick={() => this.toggleModal("AceptarCraditoModal")}
                         >
-                            No
+                        Cancelar
                         </Button>
                         <Button color="primary" type="button">
-                            Rechazar
+                            Aceptar
                         </Button>
                     </div>
                 </Modal>

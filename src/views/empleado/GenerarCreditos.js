@@ -1,25 +1,8 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// reactstrap components
 import {
   Badge,
   Card,
   CardHeader,
+  CardBody,
   CardFooter,
   DropdownMenu,
   DropdownItem,
@@ -36,105 +19,207 @@ import {
   Col,
   Button,
   UncontrolledTooltip,
-  CardBody,
+  Form,
+  Modal,
+  FormGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input,
+  InputGroup,
+
+
 } from "reactstrap";
 // core components
-import Header from "components/Headers/EmpleadoHeader.js";
 
-const EmpleadosUsers = () => {
+import { useState } from "react";
+import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
+import useRows from "components/Tables/Tablasinterno/FilasC";
+import useColumns from "components/Tables/Tablasinterno/ColumnasC";
+import Header from "components/Headers/EmpleadoHeader";
+//import AgregarCliente from "components/Modals/AgregarCliente.js"
+
+
+function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
+  const totalClientes = preGlobalFilteredRows.length;
+  const [value, setValue] = useState(globalFilter);
+
+  const onFilterChange = useAsyncDebounce(
+    (value) => setGlobalFilter(value || undefined),
+
+  );
+
+  const handleInputChange = (e) => {
+    setValue(e.target.value);
+    onFilterChange(e.target.value);
+  };
+
+  return (
+
+
+
+    <CardHeader className="bg-transparent border-0">
+      <Row className="align-items-center">
+        <Col xs="4">
+          <h3 className="text-white mb-0">Creditos</h3>
+        </Col>
+        <Col className="text-right" xs="4">
+
+          <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+            <FormGroup className="mb-0">
+              <InputGroup className="input-group-alternative">
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <i className="fas fa-search" />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input
+                  size={30}
+                  value={value || ""}
+                  onChange={handleInputChange}
+                  placeholder={`${totalClientes} Clientes registrados`}
+                />
+              </InputGroup>
+            </FormGroup>
+          </Form>
+
+        </Col>
+        <Col className="text-right" xs="4">
+          {/* <AgregarCliente /> */}
+        </Col>
+      </Row>
+    </CardHeader>
+
+
+
+  );
+}
+
+function EmpleadosUsers() {
+  const columns = useColumns();
+  const data = useRows();
+  const table = useTable(
+    {
+      columns,
+      data,
+      initialState: {
+        PageSize: 5,
+        pageIndex: 0,
+      }
+    },
+    useGlobalFilter,
+    usePagination
+  );
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    prepareRow,
+    page,
+    canPreviousPage,
+    canNextPage,
+    pageOptions,
+    pageCount,
+    gotoPage,
+    nextPage,
+    previousPage,
+    setPageSize,
+    rows,
+    preGlobalFilteredRows,
+    setGlobalFilter,
+    state: { pageIndex, pageSize, globalFilter }
+  } = table;
+
   return (
     <>
       <Header />
-      {/* Page content */}
-      <Container className="mt--7" fluid>
-        {/* Dark table */}
+      <Container className="mt--8" fluid>
         <Row className="mt-5">
           <div className="col">
             <Card className="bg-default shadow">
-              <CardHeader className="bg-transparent border-0">
-                <Row className="align-items-center">
-                  <Col xs="8">
-                    <h3 className="text-white mb-0">Clientes</h3>
-                  </Col>
-                  {/* <Col className="text-right" xs="4">
-                      <Button
-                        color="primary"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                        size="sm"
-                      >
-                      Agregar
-                      </Button>
-                    </Col>  */}
-                </Row>
-              </CardHeader>
-              <CardBody>
-              <Table
-                className="align-items-center table-dark table-flush"
+              <ClientesFiltro
+                preGlobalFilteredRows={preGlobalFilteredRows}
+                globalFilter={globalFilter}
+                setGlobalFilter={setGlobalFilter}
+              />
+
+              <Table {...getTableProps()} className="align-items-center table-dark table-flush"
                 responsive
               >
                 <thead className="thead-dark">
-                  <tr>
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
-                    <th scope="col">Tipo Identificacion</th>
-                    <th scope="col">Identificacion</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Valor del Credito</th>
-                    <th scope="col">Estado de Aprobacion</th>
-                    <th scope="col" />
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <span className="mb-0 text-sm">Javier Fernando</span>
-                    </th>
-                    <td>Moreno Rodriguez</td>
-                    <td>
-                      <Badge color="" className="badge-dot mr-4">
-                        <i className="bg-green" />
-                        Cedula de Ciudadania
-                      </Badge>
-                    </td>
-                    <td>1000283962</td>
-                    <td>morenofj@uninorte.edu.co</td>
-                    <td>$ 3.000.000 COP</td>
-                    <td>
-                      <Badge color="" className="badge-dot mr-4">
-                        <i className="bg-green" />
-                      </Badge>
-                    </td>
-                  </tr>
 
-                  <tr>
-                    <th scope="row">
-                      <span className="mb-0 text-sm">Harson David</span>
-                    </th>
-                    <td>De la hoz Herrera</td>
-                    <td>
-                      <Badge color="" className="badge-dot mr-4">
-                        <i className="bg-green" />
-                        Cedula de Ciudadania
-                      </Badge>
-                    </td>
-                    <td>1001883450</td>
-                    <td>harsond@uninorte.edu.co</td>
-                    <td>$ 2.770.000 COP</td>
-                    <td>
-                      <Badge color="" className="badge-dot mr-4">
-                        <i className="bg-orange" />
-                      </Badge>
-                    </td>
-                  </tr>
+                  {headerGroups.map((headerGroup) => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup.headers.map((column) => (
+                        <th scope="col" {...column.getHeaderProps()}>{column.render("Header")}
+                        </th>
+                      ))}
+                    </tr>
+                  ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                  {
+                    page.map((row) => {
+                      prepareRow(row);
+                      return (
+                        <tr {...row.getRowProps()}>
+                          {row.cells.map((cell) => (
+                            <th scope="row" {...cell.getCellProps()}>{cell.render("Cell")}
+                            </th>
+                          ))}
+                          </tr>
+                      );
+                    })}
                 </tbody>
-              </Table></CardBody>
+              </Table>
+              <CardFooter className="bg-transparent border-0">
+                <Row className="align-items-center">
+                  <Col xs="4">
+                    <h2>Página
+                      <strong>
+                        {" "}
+                        {pageIndex + 1} de {pageOptions.length}
+                      </strong>{" "}
+                    </h2>
+                  </Col>
+                  <Col xs="4">
+                    <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage} className="mt-4" color="primary">
+                      <i class="fas fa-angle-double-left"></i>
+                    </Button>{" "}
+                    <Button onClick={() => previousPage()} disabled={!canPreviousPage} className="mt-4" color="primary">
+                      <i class="fas fa-angle-left"></i>
+                    </Button>{" "}
+                    <Button onClick={() => nextPage()} disabled={!canNextPage} className="mt-4" color="primary">
+                      <i class="fas fa-angle-right"></i>
+                    </Button>{" "}
+                    <Button className="mt-4" color="primary"
+                      onClick={() => gotoPage(pageCount - 1)}
+                      disabled={!canNextPage}
+
+                    >
+                      <i class="fas fa-angle-double-right"></i>
+                    </Button>{" "}
+                  </Col>
+                  <Col xs="4">
+                    <select class="form-control"
+                      value={pageSize}
+                      onChange={(e) => setPageSize(Number(e.target.value))}
+                    >
+                      {[5, 10, 15].map((pageSize) => (
+                        <option key={pageSize} value={pageSize}>
+                          {pageSize !== 15 ? `Mostrar ${pageSize}` : `Mostrar todo`}
+                        </option>
+                      ))}
+                    </select>
+                  </Col>
+                </Row>
+              </CardFooter>
             </Card>
           </div>
         </Row>
       </Container>
     </>
   );
-};
+}
 
-export default EmpleadosUsers;
+export default EmpleadosUsers
