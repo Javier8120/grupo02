@@ -117,7 +117,7 @@ import {
                       <i className="ni education_hat mr-2" />
                       Universidad Del Norte
                     </div>
-                    <hr className="my-4" />
+{/*                     <hr className="my-4" />
                     <Input
                               className="form-control-alternative"
                               defaultValue="Creativa, Responsable y Autodidacta"
@@ -125,7 +125,7 @@ import {
                               placeholder="Describete"
                               type="text"
                             />
-                    {/* <a href="#pablo" onClick={(e) => e.preventDefault()}>
+ */}                    {/* <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       Mas
                     </a> */}
                   </div>
@@ -164,7 +164,7 @@ import {
                               className="form-control-label"
                               htmlFor="input-username"
                             >
-                              Usuario
+                              Nombre de Usuario
                             </label>
                             <Input
                               className="form-control-alternative"

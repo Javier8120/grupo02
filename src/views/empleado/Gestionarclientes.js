@@ -33,15 +33,14 @@ import {
   
   import { useState } from "react";
   import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
-  import useRows from "components/Tables/Tablasinterno/FilasP";
-  import useColumns from "components/Tables/Tablasinterno/ColumnasP.js";
+  import useRows from "components/Tables/Tablascliente/FilasA.js";
+  import useColumns from "components/Tables/Tablascliente/ColumnasA.js";
   import Header from "components/Headers/EmpleadoHeader";
-  //import RechazarProrroga from "components/Modals/RechazarProrroga";
-  //import Aceptarprorroga from "components/Modals/Aceptarprorroga";
+  import AgregarCliente from "components/Modals/AgregarCliente.js"
   
   
   function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
-    const totalProrrogas = preGlobalFilteredRows.length;
+    const totalClientes = preGlobalFilteredRows.length;
     const [value, setValue] = useState(globalFilter);
   
     const onFilterChange = useAsyncDebounce(
@@ -61,7 +60,7 @@ import {
       <CardHeader className="bg-transparent border-0">
         <Row className="align-items-center">
           <Col xs="4">
-            <h3 className="text-white mb-0">Solicitudes de prorroga</h3>
+            <h3 className="text-white mb-0">Clientes</h3>
           </Col>
           <Col className="text-right" xs="4">
   
@@ -77,7 +76,7 @@ import {
                     size={30}
                     value={value || ""}
                     onChange={handleInputChange}
-                    placeholder={`${totalProrrogas} Prorrogas Recientes`}
+                    placeholder={`${totalClientes} Clientes registrados`}
                   />
                 </InputGroup>
               </FormGroup>
@@ -85,7 +84,7 @@ import {
   
           </Col>
           <Col className="text-right" xs="4">
-            {/* <RechazarProrroga /> */}
+            <AgregarCliente />
           </Col>
         </Row>
       </CardHeader>

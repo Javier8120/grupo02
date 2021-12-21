@@ -68,7 +68,7 @@ const Index = (props) => {
       <Container className="mt--8" fluid>
 
       <Row className="mt-3">
-          <Col className="mb-0 mb-xl-4" xl="8">
+          <Col className="mb-5 mb-xl-4" xl="8">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <Row className="align-items-center">
@@ -153,8 +153,33 @@ const Index = (props) => {
               </Table>
             </Card>
           </Col>
+
+          <Col xl="4">
+            <Card className="shadow">
+              <CardHeader className="bg-transparent">
+                <Row className="align-items-center">
+                  <div className="col">
+                    <h6 className="text-uppercase text-muted ls-1 mb-1">
+                      Dinero Abonado
+                    </h6>
+                    <h2 className="mb-0">Total De Dinero Abonado</h2>
+                  </div>
+                </Row>
+              </CardHeader>
+              <CardBody>
+                {/* Chart */}
+                <div className="chart">
+                  <Bar
+                    data={chartExample2.data}
+                    options={chartExample2.options}
+                  />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
           
         </Row>
+
 
         <Row>
           <Col className="mb-5 mb-xl-4" xl="8">
@@ -213,28 +238,28 @@ const Index = (props) => {
 
           <Col xl="4">
             <Card className="shadow">
-              <CardHeader className="bg-transparent">
+              <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h6 className="text-uppercase text-muted ls-1 mb-1">
-                      Dinero Abonado
-                    </h6>
-                    <h2 className="mb-0">Total De Dinero Abonado</h2>
+                    <h3 className="mb-0 text-center">Certificado.</h3>
+                  
+                  <nav className="form-group text-center">
+                    <button type="button" className="btn btn-primary btn-lg">Vista Previa</button>
+                   
+                  
+                    <button type="button" className="btn btn-primary btn-lg">Descarga Tu Certificado.</button>
+                     
+
+                  </nav>
                   </div>
                 </Row>
               </CardHeader>
-              <CardBody>
-                {/* Chart */}
-                <div className="chart">
-                  <Bar
-                    data={chartExample2.data}
-                    options={chartExample2.options}
-                  />
-                </div>
-              </CardBody>
             </Card>
-          </Col>
+          </Col>                
+
         </Row>
+
+        
 
         <Row className="mt-3">
           <Col className="mb-0 mb-xl-4" xl="12">
@@ -263,15 +288,6 @@ const Index = (props) => {
                     <option value={"4"}>04</option>
                     <option value={"5"}>05</option>
                     <option value={"6"}>06</option>
-                    <option value={"7"}>07</option>
-                    <option value={"8"}>08</option>
-                    <option value={"9"}>09</option>
-                    <option value={"10"}>10</option>
-                    <option value={"11"}>11</option>
-                    <option value={"12"}>12</option>
-                    <option value={"13"}>13</option>
-                    <option value={"14"}>14</option>
-                    <option value={"15"}>15</option>
 
                   </select>
                   </center>   
@@ -290,29 +306,36 @@ const Index = (props) => {
           </Col>
         </Row>
 
-
-        <Row className="mt-3">
-          <Col className="mb-0 mb-xl-4" xl="12">
+        <Col className="mb-0 mb-xl-4" xl="12">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0 text-center">Certificado.</h3>
+                    <h3 className="mb-0 text-center">Simulacion de Pago{'\n'}</h3>
                   
-                  <nav className="form-group text-center">
-                    <button type="button" className="btn btn-primary btn-lg">Vista Previa</button>
-                   
-                  
-                    <button type="button" className="btn btn-primary btn-lg">Descarga Tu Certificado.</button>
-                     
 
-                  </nav>
+                  <div className="form-group text-center">
+                          
+                  <input type="text" placeholder="Nombre del Propietario"></input>
+                  <input type="number" placeholder="Identificacion"></input>
+                  <input type="number" placeholder="Valor Agregar"></input>
+                  <input type="text" placeholder="Producto"></input>
+                  <input type="number" placeholder="Numero de Cuenta"></input>
+
+                  </div>
+
+                  <div className="form-group text-center">
+
+                  <button type="submit" className="btn btn-primary btn-lg">Abonar Dinero</button>
+                  <button type="submit" className="btn btn-primary btn-lg">Pagar Cuota</button>
+
+                  </div>
                   </div>
                 </Row>
               </CardHeader>
             </Card>
-          </Col>
-        </Row>
+          </Col>                  
+
 
       </Container>
     </>

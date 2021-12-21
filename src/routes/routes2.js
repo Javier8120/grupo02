@@ -40,8 +40,7 @@ var routes = [
  
   {
     path: "/profile",
-    name: "Credito Educativo",
-    icon: "ni ni-planet text-blue",
+    name: "Perfil",
     component: Profile,
     layout: "/cliente",
     invisible: true,

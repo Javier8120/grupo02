@@ -18,8 +18,8 @@
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
-import Editarperfilinterno from "components/Modals/Editarperfilinterno"
-const UserHeader = () => {
+import Editarperfil from "components/Modals/Editarperfil"
+const HeaderC = () => {
   return (
     <>
       <div
@@ -46,7 +46,7 @@ const UserHeader = () => {
                 personales -Verifica que todo este claro para evitar
                 incovenientes
               </p>
-              <Editarperfilinterno/>
+              <Editarperfil/>
             </Col>
           </Row>
         </Container>
@@ -55,4 +55,4 @@ const UserHeader = () => {
   );
 };
 
-export default UserHeader;
+export default HeaderC;

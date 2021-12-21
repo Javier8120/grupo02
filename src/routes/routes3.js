@@ -26,6 +26,7 @@ import Profile from  "views/empleado/Profile.js";
 import GenerarCreditos from "views/empleado/GenerarCreditos.js"
 import GenerarHistorial from "views/empleado/GenerarHistorial.js"
 import Prorroga from "views/empleado/Prorroga"
+import Gestionarclientes from "views/empleado/Gestionarclientes"
 // import Profile from "views/admin/Profile";
 
 
@@ -45,6 +46,14 @@ var routes = [
     name: "Perfil",
     icon: "ni ni-circle-08 text-green",
     component: Profile,
+    layout: "/empleado",
+    invisible: true,
+  },
+  {
+    path: "/Gestionarclientes",
+    name: "Gestionar Clientes",
+    icon: "ni ni-folder-17 text-blue",
+    component: Gestionarclientes,
     layout: "/empleado",
     invisible: true,
   },
