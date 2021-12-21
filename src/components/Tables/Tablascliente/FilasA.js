@@ -6,11 +6,11 @@ export default function useRows() {
  const rows = useMemo(
    () => [
      {
-       nombre: "Fernando",
+       nombre: "David",
        apellido: "Rodriguez",
        tidentificacion: "Cedula",
        identificacion: "12535",
-       correo: "javier@gmail.com",
+       correo: "davidr@gmail.com",
        editar: <EditarCliente/>,
        eliminar: <EliminarCliente/> 
      },
@@ -18,14 +18,14 @@ export default function useRows() {
         nombre: "Fernando",
         apellido: "Rodriguez",
         tidentificacion: "Cedula",
-        identificacion: "12535",
+        identificacion: "1205248",
         correo: "javier@gmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       },
       {
-       nombre: "Fernando",
-       apellido: "Rodriguez",
+       nombre: "Javier ",
+       apellido: "Moreno",
        tidentificacion: "Cedula",
        identificacion: "12535",
        correo: "javier@gmail.com",
@@ -33,83 +33,83 @@ export default function useRows() {
        eliminar: <EliminarCliente/> 
      },
      {
-       nombre: "Rodriguez",
-       apellido: "Moreno",
+       nombre: "Harson",
+       apellido: "Molinar",
        tidentificacion: "Cedula",
-       identificacion: "15515",
-       correo: "javier@gmail.com",
+       identificacion: "25515",
+       correo: "harson@gmail.com",
        editar: <EditarCliente/>,
        eliminar: <EliminarCliente/> 
      },
      {
-        nombre: "Rodriguez",
-        apellido: "Moreno",
+        nombre: "Rafael",
+        apellido: "Acosta",
         tidentificacion: "Cedula",
-        identificacion: "150015",
-        correo: "javier@gmail.com",
+        identificacion: "350015",
+        correo: "rafael@gmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       },
       {
-        nombre: "Rodriguez",
-        apellido: "Moreno",
+        nombre: "Andres",
+        apellido: "Hernandez",
         tidentificacion: "Cedula",
         identificacion: "1000283965",
-        correo: "javier@gmail.com",
+        correo: "andres@hotmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       },
       {
-        nombre: "Rodriguez",
-        apellido: "Moreno",
+        nombre: "Jouse",
+        apellido: "Pineda",
         tidentificacion: "Cedula",
-        identificacion: "1515",
-        correo: "javier@gmail.com",
+        identificacion: "555515",
+        correo: "Josue@gmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       },
       {
-        nombre: "Rodriguez",
-        apellido: "Moreno",
+        nombre: "Johan",
+        apellido: "Acosta",
         tidentificacion: "Cedula",
-        identificacion: "1515",
-        correo: "javier@gmail.com",
+        identificacion: "8999515",
+        correo: "johan@gmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       },
       {
-        nombre: "Rodriguez",
-        apellido: "Moreno",
+        nombre: "Eclesiates",
+        apellido: "batista",
         tidentificacion: "Cedula",
-        identificacion: "1515",
-        correo: "javier@gmail.com",
+        identificacion: "888515",
+        correo: "eclesiastes@gmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       },
       {
-        nombre: "Rodriguez",
-        apellido: "Moreno",
-        tidentificacion: "Cedula",
-        identificacion: "1515",
-        correo: "javier@gmail.com",
-        editar: <EditarCliente/>,
-        eliminar: <EliminarCliente/> 
-      },
-      {
-       nombre: "Rodriguez",
-       apellido: "Moreno",
-       tidentificacion: "Cedula",
-       identificacion: "1515",
-       correo: "javier@gmail.com",
-       editar: <EditarCliente/>,
-       eliminar: <EliminarCliente/> 
-     },
-     {
         nombre: "Fernando",
         apellido: "Moreno",
         tidentificacion: "Cedula",
+        identificacion: "551515",
+        correo: "fer@gmail.com",
+        editar: <EditarCliente/>,
+        eliminar: <EliminarCliente/> 
+      },
+      {
+       nombre: "Natalia",
+       apellido: "Moreno ",
+       tidentificacion: "Cedula",
+       identificacion: "1000515",
+       correo: "Natalia2@gmail.com",
+       editar: <EditarCliente/>,
+       eliminar: <EliminarCliente/> 
+     },
+     {
+        nombre: "Maria",
+        apellido: "Zuñoga",
+        tidentificacion: "Cedula",
         identificacion: "1515",
-        correo: "javier@gmail.com",
+        correo: "maria@gmail.com",
         editar: <EditarCliente/>,
         eliminar: <EliminarCliente/> 
       }
