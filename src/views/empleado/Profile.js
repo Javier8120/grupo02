@@ -17,7 +17,6 @@
 */
 
 // reactstrap components
-import Editarperfil from "components/Modals/Editarperfil"
 import {
     Button,
     Card,
@@ -118,15 +117,15 @@ import {
                       <i className="ni education_hat mr-2" />
                       Universidad Del Norte
                     </div>
-                   {/*  <hr className="my-4" />
+{/*                     <hr className="my-4" />
                     <Input
                               className="form-control-alternative"
                               defaultValue="Creativa, Responsable y Autodidacta"
                               id="input-about-me"
                               placeholder="Describete"
                               type="text"
-                            /> */}
-                    {/* <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                            />
+ */}                    {/* <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       Mas
                     </a> */}
                   </div>
@@ -316,7 +315,7 @@ import {
                         
                         <Input
                           className="form-control-alternative"
-                          placeholder="Define un poco de ti"
+                          placeholder="A few words about you ..."
                           rows="4"
                           defaultValue="Trabajadora, Sociable, Responsable, Dedicada "
                           type="textarea"

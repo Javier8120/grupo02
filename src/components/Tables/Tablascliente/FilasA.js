@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import EditarCliente from "components/Modals/EditarCliente"
 import EliminarCliente from "components/Modals/EliminarCliente"
+//import AgregarCliente from "components/Modals/AgregarCliente.js"
 export default function useRows() {
  const rows = useMemo(
    () => [

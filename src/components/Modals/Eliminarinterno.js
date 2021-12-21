@@ -19,7 +19,7 @@ import {
 
 class Modals extends React.Component {
     state = {
-        EliminarClienteModal: false
+        EliminarinternoModal: false
     };
     toggleModal = state => {
         this.setState({
@@ -32,7 +32,7 @@ class Modals extends React.Component {
             <Button
                 color="warning"
                  type="button"
-                onClick={() => this.toggleModal("EliminarClienteModal")}   
+                onClick={() => this.toggleModal("EliminarinternoModal")}   
                     >
                 <i class="fas fa-times"></i>
              </Button>
@@ -41,30 +41,30 @@ class Modals extends React.Component {
                 {/* Modal */}
                 <Modal
                     className="modal-dialog-centered"
-                    isOpen={this.state.EliminarClienteModal}
-                    toggle={() => this.toggleModal("EliminarClienteModal")}
+                    isOpen={this.state.EliminarinternoModal}
+                    toggle={() => this.toggleModal("EliminarinternoModal")}
                 >
                     <div className="modal-header">
-                        <h5 className="modal-title" id="EliminarClienteModalLabel">
-                            Eliminar Cliente (Usuario)
+                        <h5 className="modal-title" id="EliminarinternoModalLabel">
+                            Eliminar Usuario Interno
                         </h5>
                         <button
                             aria-label="Close"
                             className="close"
                             data-dismiss="modal"
                             type="button"
-                            onClick={() => this.toggleModal("EliminarClienteModal")}
+                            onClick={() => this.toggleModal("EliminarinternoModal")}
                         >
                             <span aria-hidden={true}>×</span>
                         </button>
                     </div>
-                    <div className="modal-body">Estas seguro que deseas eliminar este usuario?</div>
+                    <div className="modal-body">Seguro Deseas Eliminar al Usuario?</div>
                     <div className="modal-footer">
                         <Button
                             color="secondary"
                             data-dismiss="modal"
                             type="button"
-                            onClick={() => this.toggleModal("EliminarClienteModal")}
+                            onClick={() => this.toggleModal("EliminarinternoModal")}
                         >
                             No
                         </Button>

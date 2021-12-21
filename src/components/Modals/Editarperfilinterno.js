@@ -36,7 +36,7 @@ class Modals extends React.Component {
           type="button"
           onClick={() => this.toggleModal("formModal")}
         >
-          <i class="fas fa-edit"></i>
+          Editar Perfil
         </Button>
         <Modal
           className="modal-dialog-centered"
@@ -48,7 +48,7 @@ class Modals extends React.Component {
             <Card className="bg-secondary shadow border-0">
             <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>Editar Cliente</small>
+              <small>Editar Perfil</small>
             </div>
             <Form role="form">
               <FormGroup>
@@ -58,7 +58,7 @@ class Modals extends React.Component {
                       <i className="ni ni-single-02" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Nombres" type="text" />
+                  <Input placeholder="Nombre" type="text" />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -71,6 +71,60 @@ class Modals extends React.Component {
                   <Input placeholder="Apellidos" type="text" />
                 </InputGroup>
               </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-badge" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Nombre de Usuario" type="text" />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-world" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Pais" type="text" />
+                </InputGroup>
+              </FormGroup>
+
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-pin-3" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Ciudad" type="text" />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-pin-3" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Direccion" type="text" />
+                </InputGroup>
+              </FormGroup>
+
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-pin-3" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Codigo Postal" type="text" />
+                </InputGroup>
+              </FormGroup>
+      
+
               <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
@@ -126,36 +180,7 @@ class Modals extends React.Component {
                 />
                 </InputGroup>
               </FormGroup>
-              <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-fat-add" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input placeholder="Valor de Ingresos" type="number" />
-                </InputGroup>
-              </FormGroup>
-              <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-fat-delete" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input placeholder="Valor de egresos" type="number" />
-                </InputGroup>
-              </FormGroup>
-              <FormGroup>
-                <InputGroup className="input-group-alternative mb-3">
-                  <InputGroupAddon addonType="prepend">
-                    <InputGroupText>
-                      <i className="ni ni-fat-delete" />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  <Input placeholder="Valor Matricula Educativa" type="number" />
-                </InputGroup>
-              </FormGroup>
+
               <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
@@ -184,6 +209,22 @@ class Modals extends React.Component {
                     autoComplete="new-password"
                     required
                   />                  
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-chat-round" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                          //className="form-control-alternative"
+                          placeholder="Define un poco de ti"
+                          rows="4"
+                          defaultValue="Un poco Sobre mi"
+                          type="text"
+                        />
                 </InputGroup>
               </FormGroup>
               <div className="text-center">

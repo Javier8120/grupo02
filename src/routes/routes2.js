@@ -19,6 +19,7 @@ import Index from "views/client/Index.js";
 /* import SolicitarCredito from "views/client/SolicitarCredito.js"; */
 import Historial from "views/client/GestionarCredito/Historial.js";
 import Pagar from "views/client/GestionarCredito/PagaCuota.js";
+import Profile from "views/client/Profile.js" 
 /* import HistorialDePagos from "views/ClienteExample/HistorialDePagos.js";
 import SolicitarProrroga from "views/ClienteExample/SolicitarProrroga.js";
 import Certificado from "views/ClienteExample/Certificado.js";
@@ -36,15 +37,15 @@ var routes = [
     layout: "/cliente",
     invisible: true,
   },
- /* 
+ 
   {
-    path: "/solicitar-credito",
-    name: "Credito Educativo",
-    icon: "ni ni-planet text-blue",
-    component: SolicitarCredito,
+    path: "/profile",
+    name: "Perfil",
+    component: Profile,
     layout: "/cliente",
     invisible: true,
-  }, */
+  },
+
   {
     path: "/historial-de-pagos",
     name: "Historial de Pagos",

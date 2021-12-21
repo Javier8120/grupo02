@@ -29,11 +29,14 @@ import { Login } from "views/auth/Login.jsx";
 import ClientUsers from  "views/admin/ClientUsers"
 import EmpleadosUsers from "views/admin/EmpleadosUsers"
 import Profile from "views/admin/Profile.js"
+import AdminUsers from "views/admin/AdminUsers.js"
+// import Editarperfil from "components/Modals/Editarperfil.js"
+
 
 var routes = [
   {
     path: "/index",
-    name: "Dashboard",
+    name: "Inicio",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/admin",
@@ -47,6 +50,24 @@ var routes = [
     layout: "/admin",
     invisible: true,
   },
+
+ /*  {
+    path: "../components/Modals/Editarperfil.js",
+    name: "EditarPerfil",
+    icon: "ni ni-circle-08 text-yellow",
+    component: Editarperfil,
+    layout: "/admin",
+    invisible: true,
+  }, */
+  {
+    path: "/gestionar-administradores",
+    name: "Gestionar Administradores",
+    icon: "ni ni-badge text-red",
+    component: AdminUsers,
+    layout: "/admin",
+    invisible: true,
+  },
+
 
   {
     path: "/gestionar-clientes",

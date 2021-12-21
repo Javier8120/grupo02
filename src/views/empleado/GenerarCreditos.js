@@ -36,6 +36,7 @@ import {
   Col,
   Button,
   UncontrolledTooltip,
+  CardBody,
 } from "reactstrap";
 // core components
 import Header from "components/Headers/EmpleadoHeader.js";
@@ -67,6 +68,7 @@ const EmpleadosUsers = () => {
                     </Col>  */}
                 </Row>
               </CardHeader>
+              <CardBody>
               <Table
                 className="align-items-center table-dark table-flush"
                 responsive
@@ -126,7 +128,7 @@ const EmpleadosUsers = () => {
                     </td>
                   </tr>
                 </tbody>
-              </Table>
+              </Table></CardBody>
             </Card>
           </div>
         </Row>

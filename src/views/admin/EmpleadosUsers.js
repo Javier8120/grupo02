@@ -31,9 +31,10 @@ import {
 
 import { useState} from "react";
 import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
-import useRows from "components/Tables/FilasA.js";  /// Cuando se haga uso del back en se llamara la lista correspondiente.
-import useColumns from "components/Tables/ColumnasA.js";
+import useRows from "components/Tables/Tablasinterno/FilasE";  /// Cuando se haga uso del back en se llamara la lista correspondiente.
+import useColumns from "components/Tables/Tablasinterno/Columnasinterno";
 import Header from "components/Headers/Header.js";
+import AgregarEmpleado from "components/Modals/AgregarEmpleado"
 function EmpleadosFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
   const totalEmpleados = preGlobalFilteredRows.length;
   const [value, setValue] = useState(globalFilter);
@@ -56,7 +57,7 @@ function EmpleadosFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter 
     <CardHeader className="bg-transparent border-0">
       <Row className="align-items-center">
         <Col xs="4">
-          <h3 className="text-white mb-0">Empleado</h3>
+          <h3 className="text-white mb-0">Empleados</h3>
         </Col>
         <Col className="text-right" xs="4">
 
@@ -80,14 +81,13 @@ function EmpleadosFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter 
 
         </Col>
         <Col className="text-right" xs="4">
-          <Button
+          {/* <Button
             color="primary"
             href="#Javier"
             onClick={(e) => e.preventDefault()}
-            size="sm"
           >
-            Agregar
-          </Button>
+          </Button> */}
+          <AgregarEmpleado />
         </Col>
       </Row>
     </CardHeader>

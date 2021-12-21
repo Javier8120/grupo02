@@ -144,7 +144,7 @@ const Index = (props) => {
             </Card>
           </Col>
         </Row>
-        <Row className="mt-5">
+{/*         <Row className="mt-5">
           <Col className="mb-5 mb-xl-0" xl="8">
             <Card className="shadow">
               <CardHeader className="border-0">
@@ -179,7 +179,7 @@ const Index = (props) => {
                     <td>4</td>
                     <td>Pedrosalazar123@gmail.com</td>
                     <td>
-                      {/* <i className="fas fa-arrow-up text-success mr-3" />*/}1
+                      {/* <i className="fas fa-arrow-up text-success mr-3" />
                     </td>
                   </tr>
                   <tr>
@@ -187,36 +187,11 @@ const Index = (props) => {
                     <td>6</td>
                     <td>Jessyfernandez@gmail.com</td>
                     <td>
-                      {/* <i className="fas fa-arrow-down text-warning mr-3" />{" "} */}
+                      {/* <i className="fas fa-arrow-down text-warning mr-3" />{" "}
                       2
                     </td>
                   </tr>
-{/*                   <tr>
-                    <th scope="row">/argon/charts.html</th>
-                    <td>3,513</td>
-                    <td>294</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                      36,49%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/tables.html</th>
-                    <td>2,050</td>
-                    <td>147</td>
-                    <td>
-                      <i className="fas fa-arrow-up text-success mr-3" /> 50,87%
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">/argon/profile.html</th>
-                    <td>1,795</td>
-                    <td>190</td>
-                    <td>
-                      <i className="fas fa-arrow-down text-danger mr-3" />{" "}
-                      46,53%
-                    </td>
-                  </tr> */}
+
                 </tbody>
               </Table>
             </Card>
@@ -281,55 +256,12 @@ const Index = (props) => {
                       </div>
                     </td>
                   </tr>
-                  {/* <tr>
-                    <th scope="row">Google</th>
-                    <td>4,807</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">80%</span>
-                        <div>
-                          <Progress max="100" value="80" />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Instagram</th>
-                    <td>3,678</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">75%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="75"
-                            barClassName="bg-gradient-info"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">twitter</th>
-                    <td>2,645</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">30%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="30"
-                            barClassName="bg-gradient-warning"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr> */}
+                  
                 </tbody>
               </Table>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </>
   );

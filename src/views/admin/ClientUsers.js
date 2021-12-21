@@ -33,10 +33,13 @@ import {
 
 import { useState } from "react";
 import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
-import useRows from "components/Tables/FilasA.js";
-import useColumns from "components/Tables/ColumnasA.js";
+import useRows from "components/Tables/Tablascliente/FilasA.js";
+import useColumns from "components/Tables/Tablascliente/ColumnasA.js";
 import Header from "components/Headers/Header.js";
 import AgregarCliente from "components/Modals/AgregarCliente.js"
+//import EliminarCliente from "components/Modals/EliminarCliente.js"
+//import EditarCliente from "components/Modals/EditarCliente.js"
+
 
 function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
   const totalClientes = preGlobalFilteredRows.length;

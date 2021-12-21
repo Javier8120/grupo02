@@ -48,7 +48,7 @@ class Modals extends React.Component {
             <Card className="bg-secondary shadow border-0">
               <CardBody className="px-lg-5 py-lg-5">
                 <div className="text-center text-muted mb-4">
-                  <small>Agregar Nuevo Cliente</small>
+                  <small>Agregar Nuevo Empleado</small>
                 </div>
                 <Form role="form">
                   <FormGroup>
@@ -126,7 +126,7 @@ class Modals extends React.Component {
                       />
                     </InputGroup>
                   </FormGroup>
-                  <FormGroup>
+                 {/*  <FormGroup>
                     <InputGroup className="input-group-alternative mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
@@ -155,7 +155,7 @@ class Modals extends React.Component {
                       </InputGroupAddon>
                       <Input placeholder="Valor Matricula Educativa" type="number" />
                     </InputGroup>
-                  </FormGroup>
+                  </FormGroup> */}
                   <FormGroup>
                     <InputGroup className="input-group-alternative mb-3">
                       <InputGroupAddon addonType="prepend">

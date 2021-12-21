@@ -33,15 +33,14 @@ import {
   
   import { useState } from "react";
   import { useTable, useGlobalFilter, useAsyncDebounce, usePagination } from "react-table";
-  import useRows from "components/Tables/Tablasinterno/FilasP";
-  import useColumns from "components/Tables/Tablasinterno/ColumnasP.js";
-  import Header from "components/Headers/EmpleadoHeader";
-  //import RechazarProrroga from "components/Modals/RechazarProrroga";
-  //import Aceptarprorroga from "components/Modals/Aceptarprorroga";
+  import useRows from "components/Tables/Tablasinterno/Filasinterno.js";
+  import useColumns from "components/Tables/Tablasinterno/Columnasinterno";
+  import Header from "components/Headers/Header";
+  import AgregarAdmin from "components/Modals/AgregarAdmin"
   
   
-  function ClientesFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
-    const totalProrrogas = preGlobalFilteredRows.length;
+  function AdminsFiltro({ preGlobalFilteredRows, globalFilter, setGlobalFilter }) {
+    const totalAdmins = preGlobalFilteredRows.length;
     const [value, setValue] = useState(globalFilter);
   
     const onFilterChange = useAsyncDebounce(
@@ -61,7 +60,7 @@ import {
       <CardHeader className="bg-transparent border-0">
         <Row className="align-items-center">
           <Col xs="4">
-            <h3 className="text-white mb-0">Solicitudes de prorroga</h3>
+            <h3 className="text-white mb-0">Administradores</h3>
           </Col>
           <Col className="text-right" xs="4">
   
@@ -77,7 +76,7 @@ import {
                     size={30}
                     value={value || ""}
                     onChange={handleInputChange}
-                    placeholder={`${totalProrrogas} Prorrogas Recientes`}
+                    placeholder={`${totalAdmins} Administradores registrados`}
                   />
                 </InputGroup>
               </FormGroup>
@@ -85,7 +84,7 @@ import {
   
           </Col>
           <Col className="text-right" xs="4">
-            {/* <RechazarProrroga /> */}
+            <AgregarAdmin />
           </Col>
         </Row>
       </CardHeader>
@@ -95,7 +94,7 @@ import {
     );
   }
   
-  function EmpleadosUsers() {
+  function AdminUsers() {
     const columns = useColumns();
     const data = useRows();
     const table = useTable(
@@ -138,7 +137,7 @@ import {
           <Row className="mt-5">
             <div className="col">
               <Card className="bg-default shadow">
-                <ClientesFiltro
+                <AdminsFiltro
                   preGlobalFilteredRows={preGlobalFilteredRows}
                   globalFilter={globalFilter}
                   setGlobalFilter={setGlobalFilter}
@@ -223,4 +222,4 @@ import {
     );
   }
   
-  export default EmpleadosUsers
+  export default AdminUsers
