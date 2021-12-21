@@ -30,7 +30,6 @@ import ClientUsers from  "views/admin/ClientUsers"
 import EmpleadosUsers from "views/admin/EmpleadosUsers"
 import Profile from "views/admin/Profile.js"
 import AdminUsers from "views/admin/AdminUsers.js"
-// import Editarperfil from "components/Modals/Editarperfil.js"
 
 
 var routes = [
